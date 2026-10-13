@@ -1,36 +1,62 @@
 # Étape 8 – Vérifier les numéros de série
 
-Cette étape permet de confirmer que le spoof a bien été appliqué. Vous allez comparer les anciens et nouveaux identifiants matériels.
+Cette étape indispensable permet de confirmer que le spoof a été parfaitement appliqué et que tous vos identifiants matériels ont été modifiés.
 
 {% stepper %}
 {% step %}
 
-## Ouvrir le Checker
+## 1. Rouvrir Turtle Spoofer après le redémarrage
 
-Clique sur l'onglet **Checker**. Vérifie que **Disques**, **Carte mère**, **UUID** et **MACs** affichent tous **Changed**.
+Une fois votre ordinateur redémarré :
+1. Relancez **`Turtle.exe`** en mode Administrateur.
+2. Entrez votre clé de licence et cliquez sur **LOGIN**.
+3. Restez sur l'onglet **Device**.
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FZC5CA8rs12naVSFwFLPr%2FPermanent_Hardware_Anonymizer_iccdfERoP4.png?alt=media&amp;token=55e5e966-4236-4bac-ad28-47e728c0b663" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_device_serials.png" alt="Onglet Device Turtle"><figcaption>Onglet Device avec vos identifiants matériels</figcaption></figure>
+
 {% endstep %}
 
 {% step %}
 
-## Générer le rapport
+## 2. Comparer avec votre ancienne capture d'écran
 
-Clique sur **Generate Report**.
+Comparez les valeurs actuelles affichées en rouge et vert avec la photo/capture prise à l'Étape 7 avant le spoof :
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FmkdgMLmWV77Ht0j59vrH%2FPermanent_Hardware_Anonymizer_iccdfERoP4.png?alt=media&amp;token=4fe52f90-8e9e-453e-834f-1497a3da984e" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-
-## Consulter le rapport
-
-Le rapport HWID liste l'ancienne et la nouvelle valeur de chaque identifiant.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F9P9CUVIrXz7nCe4EHCEY%2Fmsedge_JTMsPm4EHB.png?alt=media&amp;token=c1a9aa62-f026-47c6-843b-113eec971fdf" alt=""><figcaption></figcaption></figure>
+* **Baseboard Serial :** Le numéro de série de la carte mère doit être totalement différent.
+* **MAC Address :** L'adresse physique de votre carte réseau Ethernet/Wi-Fi a été renouvelée.
+* **UUID (System UUID) :** L'identifiant unique du système est régénéré.
+* **Volume ID :** L'identifiant de volume du disque a changé.
+* **File Traces :** Doit indiquer `Not found`.
 
 {% hint style="success" %}
-Le spoof a réussi si les 4 catégories (Disk, Mobo, UUID, MAC) affichent **Changed**.
+Si tous ces identifiants sont différents de votre ancien écran, votre machine est **100% anonymisée et dé-bannie**.
 {% endhint %}
+
+{% endstep %}
+
+{% step %}
+
+## 3. (Optionnel) Vérification via l'invite de commandes (CMD)
+
+Vous pouvez également vérifier directement dans Windows via le terminal :
+
+1. Ouvrez l'**Invite de commandes (CMD)** en administrateur.
+2. Tapez la commande suivante pour afficher votre numéro de série de carte mère :
+   ```cmd
+   wmic baseboard get serialnumber
+   ```
+3. Pour vérifier l'UUID :
+   ```cmd
+   wmic csproduct get uuid
+   ```
+4. Pour vérifier l'adresse MAC :
+   ```cmd
+   getmac
+   ```
+
+{% hint style="info" %}
+Sous Windows 11, si la commande `wmic` n'est pas reconnue, consultez notre tutoriel vidéo dans la section Utilitaires pour réactiver le composant WMIC en 1 clic.
+{% endhint %}
+
 {% endstep %}
 {% endstepper %}

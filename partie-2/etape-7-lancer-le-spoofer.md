@@ -1,76 +1,113 @@
-# Étape 7 – Lancer le Spoofer
+# Étape 7 – Lancer Turtle Spoofer
 
-Cette étape vous explique comment vous connecter au spoofer permanent et activer votre clé.
+Cette étape vous explique comment vous connecter à l'application **Turtle Spoofer**, activer votre clé de licence via Discord et appliquer le spoof matériel.
 
 {% stepper %}
 {% step %}
 
-## Ouvrir l'application
+## 1. Ouvrir l'application
 
-Lance **`Permanent Hardware Anonymizer.exe`**, entre ta clé de licence, puis clique sur **Se connecter**.
+Téléchargez et lancez **`Turtle.exe`** en **mode Administrateur** (clic droit > *Exécuter en tant qu'administrateur*).
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FDOYny3687cZJ0gbO55AK%2FTurtle_K6NLHZFS6S.png?alt=media&amp;token=0606fb61-71ef-4823-a251-1a61a0810fe0" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_login_empty.png" alt="Turtle Spoofer Login"><figcaption>Interface de connexion Turtle V1</figcaption></figure>
+
+{% endstep %}
+
+{% step %}
+
+## 2. Entrer votre clé de licence
+
+Collez votre clé de licence reçue lors de votre achat dans le champ prévu à cet effet (ex: `TURTLE-XXXX-XXXX-XXXX`), puis cliquez sur **LOGIN**.
+
+<figure><img src="../assets/turtle_ui/step7_login_key.png" alt="Entrer la clé"><figcaption>Saisie de la clé Turtle</figcaption></figure>
+
+{% endstep %}
+
+{% step %}
+
+## 3. Activation requise sur Discord
+
+Si vous n'avez pas encore activé votre clé, le message rouge suivant s'affiche :  
+`Please activate your license first on our official Discord using /activate !`
+
+<figure><img src="../assets/turtle_ui/step7_login_error_discord.png" alt="Message activation requise"><figcaption>Message d'activation Discord obligatoire</figcaption></figure>
 
 {% hint style="info" %}
-Tu peux changer la **langue** de l'application (**EN**/**FR**) en bas à droite de la fenêtre.
+L'activation se fait directement sur notre serveur Discord officiel pour lier votre clé à votre profil et vous attribuer votre rôle client.
 {% endhint %}
+
 {% endstep %}
 
 {% step %}
 
-## Activer ta clé
+## 4. Activer sa licence dans le salon #activation
 
-Si ta clé n'est pas encore activée, clique sur **Activate Key**.
+1. Rendez-vous sur notre serveur Discord officiel dans le salon **`# 💬 | activation`**.
+2. Tapez la commande slash :
+   ```text
+   /activate key: VOTRE_CLE
+   ```
+3. Validez l'envoi du message.
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2Fg4N1gvW7ZCQypFjLlv9F%2FTurtle_2icttVdwcJ.png?alt=media&amp;token=8b4951ce-d5a6-42a2-90f5-34238100db93" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_discord_command.png" alt="Commande /activate Discord"><figcaption>Salon #activation sur Discord</figcaption></figure>
+
 {% endstep %}
 
 {% step %}
 
-## Connecter Discord
+## 5. Confirmation de l'activation
 
-Clique sur **Connect with Discord**.
+Le bot **TurtleUD** vous répond instantanément avec un message privé de confirmation :
+* ✅ **Rôle `Customer` attribué !**
+* Statut : **Activation Réussie !**
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FP4UJ1rQb2vW7wK4atrT7%2Fbrave_ljnR6WJol8.png?alt=media&amp;token=251fdc2c-165e-4523-a838-f0d2667699cb" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_discord_success.png" alt="Activation Réussie"><figcaption>Confirmation par le bot TurtleUD</figcaption></figure>
+
 {% endstep %}
 
 {% step %}
 
-## Autoriser l'application
+## 6. Se connecter au Spoofer
 
-Clique sur **Authorize** pour lier ton compte Discord.
+Retournez sur l'application **Turtle V1**, vérifiez votre clé et cliquez sur **LOGIN**. Vous arrivez sur l'onglet **Device** qui récapitule vos informations matérielles actuelles (Carte Mère, Carte Réseau, Baseboard, MAC, UUID, Volume ID, TPM).
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FXzgdtiWiA6J3X5qWyDji%2Fbrave_Y24XLnn3XU.png?alt=media&amp;token=beda694f-4c0d-47b8-add7-49acaf66c256" alt=""><figcaption></figcaption></figure>
-{% endstep %}
+<figure><img src="../assets/turtle_ui/step7_device_serials.png" alt="Onglet Device Turtle"><figcaption>Onglet Device : Récapitulatif de vos identifiants avant spoof</figcaption></figure>
 
-{% step %}
-
-## Activer la licence
-
-Vérifie ta clé de licence, puis clique sur **Activate**.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FGf9ywJFuLRgr4k5zMqmk%2Fbrave_rJuvhdf71P.png?alt=media&amp;token=c8c213e4-a05b-4ac3-a509-944eaec8a78f" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-
-## Vérifier le statut
-
-Le statut doit afficher **Active** en vert.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FmYRJKGSTtCnfjzKA7wY3%2Fbrave_YnGluVoLYD.png?alt=media&amp;token=38009fc7-3af4-4382-aba7-bba09af077e0" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-Ta clé est activée dès que le statut passe sur **Active**.
+{% hint style="warning" %}
+Prenez une capture d'écran de cette page **Device** pour comparer vos anciens et vos nouveaux numéros de série à l'étape suivante !
 {% endhint %}
+
 {% endstep %}
 
 {% step %}
 
-## Se reconnecter à l'application
+## 7. Appliquer le Spoof
 
-Retourne dans **`Permanent Hardware Anonymizer.exe`** et clique sur **Se connecter,** ta clé est maintenant activée.
+1. Cliquez sur l'onglet **Spoofer** en haut au centre.
+2. Cliquez sur le bouton vert **SPOOF (AMI)** (ou *SPOOF TPM* si votre configuration le requiert).
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FDKcHZA7T7hK3DdFVrYee%2FTurtle_cdBX4pOEdT.png?alt=media&amp;token=320fe644-4135-44cf-8c11-53afa5590151" alt=""><figcaption></figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_spoofer_menu.png" alt="Menu Spoofer"><figcaption>Boutons d'action du spoofer</figcaption></figure>
+
+{% endstep %}
+
+{% step %}
+
+## 8. Succès et Redémarrage
+
+Le spoofer modifie l'ensemble des tables en mémoire et affiche les logs de réussite :
+* `[+] BASEBOARD SERIAL HAS BEEN CHANGED [SUCCESS]`
+* `[+] CHASSIS & SYSTEM SERIALS SPOOFED [SUCCESS]`
+* `[+] SYSTEM UUID HAS BEEN CHANGED [SUCCESS]`
+* `[+] MAC ADDRESS SPOOFED & ADAPTER RESET [SUCCESS]`
+* `[+] WINDOWS MACHINEGUID CLEANED [SUCCESS]`
+* `[+] ARPCACHE & SYSTEM TRACES WIPED [SUCCESS]`
+* `[SUCCESS] HARDWARE SPOOFING APPLIED SUCCESSFULLY!`
+
+<figure><img src="../assets/turtle_ui/step7_spoofer_success.png" alt="Logs de succès"><figcaption>Validation du spoof dans les logs</figcaption></figure>
+
+{% hint style="danger" %}
+**IMPORTANT :** Redémarrez obligatoirement votre ordinateur (**Restart PC**) comme indiqué par l'application pour que l'ensemble des nouveaux numéros de série soient appliqués définitivement par Windows !
+{% endhint %}
+
 {% endstep %}
 {% endstepper %}
