@@ -16,7 +16,7 @@ Pour les utilisateurs AMD avec une configuration **RAID activé dans le BIOS**.
 
 **Contenu** : Instructions pour charger les pilotes RAID au moment de l’installation + configuration du BIOS adaptée (RAID mode + driver dans la clé USB).
 
-[**Accéder à l’installation AMD (RAIDABLE)**](/turtle/etape-5-reinstallation-speciale-de-windows/amd-raidable.md)
+[**Accéder à l’installation AMD (RAIDABLE)**](amd-raidable.md)
 
 ***
 
@@ -26,7 +26,7 @@ Pour les utilisateurs Intel souhaitant configurer le RAID 0.
 
 **Contenu** : Étapes détaillées pour charger les pilotes Intel RST pendant l’installation, et activer le mode RAID dans le BIOS (RST ou VMD).
 
-[**Accéder à l’installation Intel (RAID0)**](/turtle/etape-5-reinstallation-speciale-de-windows/intel-raid0.md)
+[**Accéder à l’installation Intel (RAID0)**](intel-raid0.md)
 
 ***
 
@@ -36,7 +36,7 @@ Pour ceux qui ne peuvent pas RAID.
 
 **Contenu** : Processus simple avec **pilote Ethernet** intégré + **autounattend.xml** déjà placé sur la clé.
 
-[**Accéder à l’installation sans RAID**](/turtle/etape-5-reinstallation-speciale-de-windows/sans-raid-installation-classique.md)
+[**Accéder à l’installation sans RAID**](sans-raid-installation-classique.md)
 
 ***
 

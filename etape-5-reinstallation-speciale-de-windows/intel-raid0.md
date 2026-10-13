@@ -25,7 +25,7 @@ Si vous ne souhaitez pas utiliser le mode RAID0, ou que vous ne savez pas si vot
 ### Passez à l’étape suivante :
 
 {% content-ref url="/pages/WtngL3rx980XfZZ5QOFM" %}
-[Sans RAID (installation classique)](/turtle/etape-5-reinstallation-speciale-de-windows/sans-raid-installation-classique.md)
+[Sans RAID (installation classique)](sans-raid-installation-classique.md)
 {% endcontent-ref %}
 
 

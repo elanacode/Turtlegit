@@ -114,7 +114,7 @@ Ouvre l'explorateur de fichiers, puis ta clé USB dans **Ce PC**.
 
 ## Copier autounattend.xml
 
-Glisse le fichier téléchargé à [Étape 1 – Préparation de la clé USB](/turtle/partie-1/etape-1-preparation-de-la-cle-usb.md#fichiers-requis) dans la clé USB.
+Glisse le fichier téléchargé à [Étape 1 – Préparation de la clé USB](../../partie-1/etape-1-preparation-de-la-cle-usb.md#fichiers-requis) dans la clé USB.
 
 <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FYX8CGHxFv0yTmWmlyD0k%2Fbrave_4ykNOQvaiJ.gif?alt=media&amp;token=12cf32fa-c689-46f4-b4ce-a64f11e9a435" alt=""><figcaption></figcaption></figure>
 {% endstep %}

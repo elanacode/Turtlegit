@@ -16,7 +16,7 @@ Avant d’installer Windows, il faut d’abord créer une **clé USB bootable pr
 
 **Fichier d'installation automatisée**
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><p><strong>Windows 10/11</strong></p><p>autounattend.xml</p></td><td><a href="https://api.turtle.com/api/private-files/dl/dPAUiGcly02QuTkKdjzylvIib3SMpWq9">https://api.turtle.com/api/private-files/dl/dPAUiGcly02QuTkKdjzylvIib3SMpWq9</a></td><td data-object-fit="contain"><a href="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F9QSETGqC20yBfvdVI83M%2F2ddfb64a3126fd37d9f7bbd3444b947b.webp?alt=media&amp;token=6bb3566a-34ae-4470-903d-0b063906a90f">2ddfb64a3126fd37d9f7bbd3444b947b.webp</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><p><strong>Windows 10/11</strong></p><p>autounattend.xml</p></td><td><a href="https://mega.nz/folder/6HxFRC4Q">https://mega.nz/folder/6HxFRC4Q</a></td><td data-object-fit="contain"><a href="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F9QSETGqC20yBfvdVI83M%2F2ddfb64a3126fd37d9f7bbd3444b947b.webp?alt=media&amp;token=6bb3566a-34ae-4470-903d-0b063906a90f">2ddfb64a3126fd37d9f7bbd3444b947b.webp</a></td></tr></tbody></table>
 
 {% hint style="warning" %}
 Ces éléments sont obligatoires. Ne poursuis pas tant qu'ils ne sont pas tous prêts.
