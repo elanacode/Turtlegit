@@ -4,10 +4,10 @@ Cette page concerne les utilisateurs Intel souhaitant activer le mode RAID 0 dan
 
 > La procédure RAID Intel varie fortement selon votre carte mère, votre génération de processeur, et la présence ou non du mode **VMD**.
 
-Afin d’éviter toute erreur critique, **ce guide ne fournit pas les étapes RAID Intel** directement.
+Afin d’éviter toute erreur critique, **les manipulations RAID Intel avancées demandent une vérification préalable**.
 
 {% hint style="warning" %}
-Support Intel RAID ➜ Ouvrir un ticket support
+**Support Intel RAID :** Ouvrez un ticket sur notre serveur Discord afin d'obtenir la configuration exacte pour votre carte mère Intel.
 {% endhint %}
 
 ***
@@ -18,16 +18,10 @@ Support Intel RAID ➜ Ouvrir un ticket support
 * Certains BIOS n’ont pas d’option claire "RAID Mode", mais une section **VMD** qui ne doit **surtout pas** être mal configurée.
 * Le type de disque (NVMe ou SATA) peut aussi modifier la procédure.
 
-### En attendant :
+***
 
-Si vous ne souhaitez pas utiliser le mode RAID0, ou que vous ne savez pas si votre carte mère Intel le permet correctement :
+### Vous préférez installer sans RAID ?
 
-### Passez à l’étape suivante :
+Si vous ne souhaitez pas utiliser le mode RAID0, ou que vous ne savez pas si votre carte mère Intel le permet :
 
-{% content-ref url="/pages/WtngL3rx980XfZZ5QOFM" %}
-[Sans RAID (installation classique)](sans-raid-installation-classique.md)
-{% endcontent-ref %}
-
-
-### Vidéo Tutoriel (Configuration RAID)
-{% embed url="https://youtu.be/ODsYhWsST8s" %}
+👉 [**Accéder au guide Sans RAID (installation classique)**](sans-raid-installation-classique.md)
