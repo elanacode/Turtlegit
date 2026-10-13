@@ -25,8 +25,6 @@
 ## PARTIE 3 - Spoof & Finalisation
 * [Étape 6 – Préparation du système (Defender)](partie-2/etape-6-preparation-du-systeme.md)
 * [Étape 7 – Lancer le Spoofer](partie-2/etape-7-lancer-le-spoofer.md)
-  * [Permanent Spoof](partie-2/etape-7-lancer-le-spoofer/permanent-spoof.md)
-  * [EFI Spoof](partie-2/etape-7-lancer-le-spoofer/efi-spoof.md)
 * [Étape 8 – Vérifier les numéros de série](partie-2/etape-8-verifier-les-numeros-de-serie.md)
 * [Étape 9 – Activation de Windows](partie-2/etape-9-activation-de-windows.md)
 * [Finalisation – Éviter les détections](partie-2/finalisation-eviter-les-detections-et-les-bannissements.md)
