@@ -17,7 +17,7 @@ Le mode RAID est souvent activé sur certaines machines AMD (AM4 / AM5). Si vous
 Utilisez impérativement le fichier `autounattend.xml` spécial RAID pour Windows 11.
 {% endhint %}
 
-{% embed url="<https://mega.nz/folder/6HxFRC4Q>" %}
+{% embed url="<https://mega.nz/folder/7ShnFAjL>" %}
 autounattend.xml
 {% endembed %}
 
