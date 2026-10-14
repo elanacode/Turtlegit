@@ -5,7 +5,7 @@ Repère le fabricant exact de ta carte mère, tu en auras besoin à l'étape sui
 {% embed url="https://youtu.be/frigEg_LPRg" %}
 
 {% hint style="info" %}
-La correction des **Informations système** n'est plus obligatoire, tu peux sélectionner ton fabricant **manuellement** au moment du **spoof**. Mais **l'identifier** ici t'évite de le rechercher à nouveau à la **prochaine étape**.
+La détection de la carte mère se fait facilement via **MSINFO32**. L'identifier ici t'évite de chercher à l'étape du flash BIOS et du spoofing.
 {% endhint %}
 
 ## Vérifier Informations système
@@ -24,7 +24,7 @@ Appuie sur **`Win + R`**, tape **`msinfo32`**, puis valide.
 
 ## Repérer ta carte mère
 
-Dans **Résumé système**, note:
+Dans **Résumé système**, note :
 
 * **Fabricant de la carte de base**
 * **Produit de la carte de base**
@@ -34,7 +34,7 @@ Dans **Résumé système**, note:
 {% endstepper %}
 
 {% hint style="info" %}
-Garde cette **information** sous la main, tu en auras besoin à **l'Étape 3** (flash BIOS) et à **l'Étape 7** (sélection de la **carte mère** pour le **spoof**).
+Garde cette **information** sous la main, tu en auras besoin à **l'Étape 3** (flash BIOS) et à **l'Étape 7** pour vérifier que le spoofer Turtle a bien détecté ta carte mère.
 {% endhint %}
 
 ## Comparer avec le BIOS
@@ -48,7 +48,7 @@ Redémarre et appuie sur la touche dédiée à ton PC (généralement **`Suppr`*
 
 Ou, depuis un **terminal** en **administrateur** :
 
-```
+```cmd
 shutdown /r /fw /t 0
 ```
 
@@ -65,12 +65,6 @@ En **EZ Mode**, vérifie que le nom affiché dans **Information** correspond à 
 {% endstep %}
 {% endstepper %}
 
-{% hint style="warning" %}
-Si les informations **MSINFO32** et **BIOS** ne correspondent pas, corrige-les avant de continuer ou sélectionne simplement ton fabricant **manuellement** à l'**Étape 7**.
-{% endhint %}
-
-<table data-view="cards"><thead><tr><th align="center"></th><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td align="center"><strong>Réparation de l'identité SMBIOS</strong></td><td align="center">Corrige le fabricant, le produit et la version de la carte mère affichés dans MSINFO32</td><td><a href="https://turtle.com/fr/products/smbios-identity-repair">https://turtle.com/fr/products/smbios-identity-repair</a></td><td data-object-fit="contain"><a href="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FrH3EIErJTLRo2u8YJgH4%2F2f3e77f5-b487-46e3-a46d-7265b7600fc0.webp?alt=media&amp;token=8553e2b0-5457-407f-898f-37672ec08f42">2f3e77f5-b487-46e3-a46d-7265b7600fc0.webp</a></td></tr></tbody></table>
-
-{% hint style="info" %}
-Ce service corrige les **Informations système** affichées dans **MSINFO32** (fabricant, produit, version de la carte mère) si elles sont **erronées**.
+{% hint style="success" %}
+Une fois le fabricant et le modèle de votre carte mère confirmés, vous pouvez passer à l'**Étape 3 (Flash du BIOS)**.
 {% endhint %}
