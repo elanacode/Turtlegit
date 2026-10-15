@@ -1,72 +1,71 @@
-# Méthode alternative (Rufus)
+# Alternative Method (Rufus)
 
-Cette méthode est recommandée si vous disposez déjà d'un fichier ISO officiel Windows 10/11 ou si l'outil de création Microsoft (`MediaCreationTool`) rencontre des erreurs lors du téléchargement.
+This method is recommended if you already have an official Windows 10/11 ISO file or if the Microsoft Media Creation Tool fails with download errors.
 
 {% embed url="https://youtu.be/d1UFvaIN2bY" %}
 
 ***
 
-## Prérequis
+## Prerequisites
 
-1. Téléchargez la dernière version de **[Rufus](https://rufus.ie/)** (version portable ou installable).
-2. Une **clé USB d’au moins 8 Go** (elle sera entièrement formatée).
-3. Le fichier image ISO officiel de Windows 10 ou Windows 11.
+1. Download the latest version of **[Rufus](https://rufus.ie/)**.
+2. A **USB flash drive (min 8 GB)** (will be fully formatted).
+3. The official Windows 10 or Windows 11 ISO file.
 
 ***
 
 {% stepper %}
 {% step %}
 
-## 1. Brancher la clé USB et lancer Rufus
+## 1. Plug in USB and Run Rufus
 
-* Branchez votre clé USB sur un port USB direct de la carte mère.
-* Lancez **`Rufus.exe`** en mode Administrateur.
+* Plug your USB drive directly into your motherboard.
+* Run **`Rufus.exe`** as Administrator.
 
 {% endstep %}
 
 {% step %}
 
-## 2. Configurer les paramètres de flash
+## 2. Configure Flash Parameters
 
-Remplissez les options dans l'interface de Rufus exactement comme suit :
+Set the parameters in Rufus as follows:
 
-* **Périphérique :** Sélectionnez votre clé USB (min 8 Go).
-* **Type de démarrage :** Cliquez sur **SÉLECTION** et choisissez votre fichier `.iso` de Windows.
-* **Option d'image :** *Installation standard de Windows*.
-* **Schéma de partition :** **GPT** *(obligatoire pour les cartes mères modernes UEFI)*.
-* **Système de destination :** **UEFI (non CSM)**.
-* **Système de fichiers :** **NTFS** (ou FAT32 par défaut).
+* **Device:** Select your USB drive (min 8 GB).
+* **Boot selection:** Click **SELECT** and choose your Windows `.iso` file.
+* **Image option:** *Standard Windows installation*.
+* **Partition scheme:** **GPT** *(mandatory for modern UEFI systems)*.
+* **Target system:** **UEFI (non CSM)**.
+* **File system:** **NTFS** (or FAT32 default).
 
 {% hint style="danger" %}
-**Attention :** Veillez à bien choisir **GPT** et **UEFI (non CSM)**, sinon votre carte mère ne pourra pas démarrer sur la clé en mode sécurisé.
+**Warning:** Make sure to select **GPT** and **UEFI (non CSM)**, otherwise your motherboard won't boot in secure UEFI mode.
 {% endhint %}
 
 {% endstep %}
 
 {% step %}
 
-## 3. Lancer la création de la clé
+## 3. Flash the USB Drive
 
-1. Cliquez sur le bouton **DÉMARRER** en bas.
-2. Une fenêtre d'options de personnalisation Windows s'affiche (vous pouvez cocher la suppression du besoin de compte Microsoft en ligne si proposé).
-3. Validez l'avertissement d'effacement des données en cliquant sur **OK**.
-4. Patientez pendant l'écriture des fichiers (environ 5 à 10 minutes selon la vitesse de votre clé USB).
+1. Click **START** at the bottom.
+2. Confirm wiping all existing data on the USB drive.
+3. Wait for the writing process to complete (approx. 5 to 10 minutes).
 
 {% endstep %}
 
 {% step %}
 
-## 4. Ajout des fichiers indispensables sur la clé
+## 4. Copy Mandatory Files to USB
 
-Une fois que la barre verte affiche **PRÊT** :
+Once the green bar says **READY**:
 
-1. Ouvrez votre clé USB dans l'explorateur Windows.
-2. Téléchargez et copiez à la racine de la clé :
-   * **`autounattend.xml`** (disponible dans notre dossier MEGA).
-   * Votre installateur de pilote Ethernet (Realtek ou Intel Network) pour avoir internet immédiatement après l'installation.
+1. Open your USB drive in Windows File Explorer.
+2. Copy to the root of the USB drive:
+   * **`autounattend.xml`** (from our MEGA folder).
+   * Your network driver installer (Realtek or Intel Network).
 
 {% hint style="success" %}
-Votre clé USB bootable créée avec Rufus est désormais prête pour l'installation propre !
+Your Rufus bootable USB flash drive is now ready!
 {% endhint %}
 
 {% endstep %}

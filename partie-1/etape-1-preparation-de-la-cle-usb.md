@@ -1,34 +1,34 @@
-# Étape 1 – Préparation de la clé USB
+# Step 1 – USB Drive Setup
 
-Avant d’installer Windows, il faut d’abord créer une **clé USB bootable propre et fonctionnelle**.
+Before reinstalling Windows, you must first create a **clean and bootable USB flash drive**.
 
 ***
 
-## Fichiers Requis
+## Required Files
 
 {% hint style="info" %}
-**Préparez ces fichiers avant de commencer.**
+**Prepare these files before proceeding.**
 {% endhint %}
 
-### 1. Outil de création Windows officiel (Microsoft)
+### 1. Official Microsoft Media Creation Tools
 
-* [Télécharger l'outil Windows 10 (MediaCreationTool)](https://go.microsoft.com/fwlink/?LinkId=2265055)
-* [Télécharger l'outil Windows 11 (MediaCreationTool)](https://go.microsoft.com/fwlink/?linkid=2156295)
+* [Download Windows 10 Media Creation Tool](https://go.microsoft.com/fwlink/?LinkId=2265055)
+* [Download Windows 11 Media Creation Tool](https://go.microsoft.com/fwlink/?linkid=2156295)
 
 ***
 
-### 2. Fichier d'installation automatisée (`autounattend.xml`)
+### 2. Automated Installation File (`autounattend.xml`)
 
-Ce fichier permet de contourner les prérequis Windows (TPM, Secure Boot) et de créer un compte local propre sans télémétrie.
+This file automatically bypasses Windows requirements (TPM 2.0, Secure Boot, RAM) and creates a local offline user without telemetry.
 
 {% embed url="https://mega.nz/folder/3ThjzYZb#4Sjx9Ee23BHB3apJa2hrLA" %}
-Dossier MEGA - Fichier autounattend.xml & Drivers
+MEGA Folder - autounattend.xml & Drivers
 {% endembed %}
 
-👉 **[Cliquez ici pour ouvrir le dossier MEGA et télécharger autounattend.xml](https://mega.nz/folder/3ThjzYZb#4Sjx9Ee23BHB3apJa2hrLA)**
+👉 **[Click here to open the MEGA folder and download autounattend.xml](https://mega.nz/folder/3ThjzYZb#4Sjx9Ee23BHB3apJa2hrLA)**
 
 ***
 
 {% hint style="warning" %}
-Ces éléments sont obligatoires. Ne poursuivez pas tant qu'ils ne sont pas tous prêts sur votre ordinateur.
+These elements are required. Do not proceed until you have them ready.
 {% endhint %}

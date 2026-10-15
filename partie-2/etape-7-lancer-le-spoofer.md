@@ -1,112 +1,106 @@
-# Étape 7 – Lancer Turtle Spoofer
+# Step 7 – Run Turtle Spoofer
 
-Cette étape vous explique comment vous connecter à l'application **Turtle Spoofer**, activer votre clé de licence via Discord et appliquer le spoof matériel.
+This step guides you through logging into **Turtle Spoofer**, activating your license via Discord, and applying the hardware spoof.
 
 {% stepper %}
 {% step %}
 
-## 1. Ouvrir l'application
+## 1. Open the Application
 
-Téléchargez et lancez **`Turtle.exe`** en **mode Administrateur** (clic droit > *Exécuter en tant qu'administrateur*).
+Launch **`Turtle.exe`** as **Administrator** (right-click > *Run as administrator*).
 
-<figure><img src="../assets/turtle_ui/step7_login_empty.png" alt="Turtle Spoofer Login"><figcaption>Interface de connexion Turtle V1</figcaption></figure>
-
-{% endstep %}
-
-{% step %}
-
-## 2. Entrer votre clé de licence
-
-Collez votre clé de licence reçue lors de votre achat dans le champ prévu à cet effet (ex: `TURTLE-XXXX-XXXX-XXXX`), puis cliquez sur **LOGIN**.
-
-<figure><img src="../assets/turtle_ui/step7_login_key.png" alt="Entrer la clé"><figcaption>Saisie de la clé Turtle</figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_login_empty.png" alt="Turtle Spoofer Login"><figcaption>Turtle V1 Login Interface</figcaption></figure>
 
 {% endstep %}
 
 {% step %}
 
-## 3. Activation requise sur Discord
+## 2. Enter License Key
 
-Si vous n'avez pas encore activé votre clé, le message rouge suivant s'affiche :  
+Paste your license key received upon purchase into the input field, then click **LOGIN**.
+
+<figure><img src="../assets/turtle_ui/step7_login_key.png" alt="Enter License Key"><figcaption>Entering Turtle Key</figcaption></figure>
+
+{% endstep %}
+
+{% step %}
+
+## 3. Discord Activation Required
+
+If your key is not activated yet, you will see:  
 `Please activate your license first on our official Discord using /activate !`
 
-<figure><img src="../assets/turtle_ui/step7_login_error_discord.png" alt="Message activation requise"><figcaption>Message d'activation Discord obligatoire</figcaption></figure>
-
-{% hint style="info" %}
-L'activation se fait directement sur notre serveur Discord officiel pour lier votre clé à votre profil et vous attribuer votre rôle client.
-{% endhint %}
+<figure><img src="../assets/turtle_ui/step7_login_error_discord.png" alt="Discord Activation Required"><figcaption>Discord Activation Required</figcaption></figure>
 
 {% endstep %}
 
 {% step %}
 
-## 4. Activer sa licence dans le salon #activation
+## 4. Activate License in #activation Channel
 
-1. Rendez-vous sur notre serveur Discord officiel dans le salon **`# 💬 | activation`**.
-2. Tapez la commande slash :
+1. Join our official Discord server and head to the **`# 💬 | activation`** channel.
+2. Use the slash command:
    ```text
-   /activate key: VOTRE_CLE
+   /activate key: YOUR_KEY
    ```
-3. Validez l'envoi du message.
+3. Submit the command.
 
-<figure><img src="../assets/turtle_ui/step7_discord_command.png" alt="Commande /activate Discord"><figcaption>Salon #activation sur Discord</figcaption></figure>
-
-{% endstep %}
-
-{% step %}
-
-## 5. Confirmation de l'activation
-
-Le bot **TurtleUD** vous répond instantanément avec un message privé de confirmation :
-* ✅ **Rôle `Customer` attribué !**
-* Statut : **Activation Réussie !**
-
-<figure><img src="../assets/turtle_ui/step7_discord_success.png" alt="Activation Réussie"><figcaption>Confirmation par le bot TurtleUD</figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_discord_command.png" alt="Discord Command"><figcaption>Discord Activation Channel</figcaption></figure>
 
 {% endstep %}
 
 {% step %}
 
-## 6. Se connecter au Spoofer
+## 5. Activation Confirmation
 
-Retournez sur l'application **Turtle V1**, vérifiez votre clé et cliquez sur **LOGIN**. Vous arrivez sur l'onglet **Device** qui récapitule vos informations matérielles actuelles (Carte Mère, Carte Réseau, Baseboard, MAC, UUID, Volume ID, TPM).
+The **TurtleUD** bot will confirm activation immediately:
+* ✅ **Role `Customer` assigned!**
+* Status: **Activation Successful!**
 
-<figure><img src="../assets/turtle_ui/step7_device_serials.png" alt="Onglet Device Turtle"><figcaption>Onglet Device : Récapitulatif de vos identifiants avant spoof</figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_discord_success.png" alt="Activation Confirmed"><figcaption>Bot Confirmation</figcaption></figure>
+
+{% endstep %}
+
+{% step %}
+
+## 6. Login to Spoofer & Take Screenshot
+
+Return to **Turtle V1**, click **LOGIN**. You will see the **Device** tab with all your current hardware identifiers.
+
+<figure><img src="../assets/turtle_ui/step7_device_serials.png" alt="Device Tab"><figcaption>Device Tab: Hardware Identifiers Before Spoofing</figcaption></figure>
 
 {% hint style="warning" %}
-Prenez une capture d'écran de cette page **Device** pour comparer vos anciens et vos nouveaux numéros de série à l'étape suivante !
+Take a photo or screenshot of this screen to compare your serial numbers after spoofing!
 {% endhint %}
 
 {% endstep %}
 
 {% step %}
 
-## 7. Appliquer le Spoof
+## 7. Apply the Spoof
 
-1. Cliquez sur l'onglet **Spoofer** en haut au centre.
-2. Cliquez sur le bouton vert **SPOOF (AMI)** (ou *SPOOF TPM* si votre configuration le requiert).
+1. Click on the **Spoofer** tab in the top navigation bar.
+2. Click the green **SPOOF (AMI)** button.
 
-<figure><img src="../assets/turtle_ui/step7_spoofer_menu.png" alt="Menu Spoofer"><figcaption>Boutons d'action du spoofer</figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_spoofer_menu.png" alt="Spoofer Menu"><figcaption>Turtle Spoofer Menu</figcaption></figure>
 
 {% endstep %}
 
 {% step %}
 
-## 8. Succès et Redémarrage
+## 8. Success & Restart PC
 
-Le spoofer modifie l'ensemble des tables en mémoire et affiche les logs de réussite :
+The spoofer will randomize your serials and display success logs:
 * `[+] BASEBOARD SERIAL HAS BEEN CHANGED [SUCCESS]`
 * `[+] CHASSIS & SYSTEM SERIALS SPOOFED [SUCCESS]`
 * `[+] SYSTEM UUID HAS BEEN CHANGED [SUCCESS]`
 * `[+] MAC ADDRESS SPOOFED & ADAPTER RESET [SUCCESS]`
-* `[+] WINDOWS MACHINEGUID CLEANED [SUCCESS]`
-* `[+] ARPCACHE & SYSTEM TRACES WIPED [SUCCESS]`
 * `[SUCCESS] HARDWARE SPOOFING APPLIED SUCCESSFULLY!`
 
-<figure><img src="../assets/turtle_ui/step7_spoofer_success.png" alt="Logs de succès"><figcaption>Validation du spoof dans les logs</figcaption></figure>
+<figure><img src="../assets/turtle_ui/step7_spoofer_success.png" alt="Success Logs"><figcaption>Spoofing Applied Successfully</figcaption></figure>
 
 {% hint style="danger" %}
-**IMPORTANT :** Redémarrez obligatoirement votre ordinateur (**Restart PC**) comme indiqué par l'application pour que l'ensemble des nouveaux numéros de série soient appliqués définitivement par Windows !
+**MANDATORY:** Restart your computer now to let Windows apply all new hardware identifiers!
 {% endhint %}
 
 {% endstep %}

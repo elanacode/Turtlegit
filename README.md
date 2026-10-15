@@ -1,11 +1,11 @@
-# Bienvenue sur le guide officiel Turtle Spoofer
+# Welcome to the Official Turtle Spoofer Guide
 
-Ce guide a été conçu pour vous permettre de suivre une procédure claire, rapide et sécurisée, étape par étape, pour dé-bannir votre machine et la rendre 100% indétectable.
+This guide is designed to provide you with a clear, fast, and secure step-by-step procedure to unban your PC and make your hardware 100% undetectable.
 
-## 🚀 Navigation dans le guide
+## 🚀 Navigation
 
-Suivez les étapes dans l'ordre strict :
-1. **Partie 1 : Préparation du support d'installation** (Clé USB Windows 10/11 ou Rufus)
-2. **Identification & BIOS** (MSINFO, Flash du BIOS, Réglages de sécurité)
-3. **Réinstallation propre** (VHD ou RAID)
-4. **Configuration du Système & Lancement** (Defender, Lancement Turtle Spoofer, Vérification des sérials)
+Follow the steps in strict chronological order:
+1. **Part 1: Installation Media Preparation** (Windows 10/11 Bootable USB or Rufus)
+2. **Motherboard & BIOS** (MSINFO, BIOS Flash / Update, Security Settings)
+3. **Clean Installation** (Virtual Disk VHD or RAID)
+4. **System Setup & Spoofer Launch** (Defender, Turtle Spoofer Execution, Serial Verification)

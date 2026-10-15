@@ -1,60 +1,48 @@
-# Finalisation – Éviter les détections et les bannissements
+# Finalization – Avoid Future Bans
 
-Félicitations, votre ordinateur est désormais totalement spoofé et nettoyé !  
-Afin d'éviter tout bannissement immédiat ou lié à une redétection par association de compte/réseau, vous devez **impérativement respecter les consignes de sécurité suivantes**.
+Congratulations, your PC is now fully spoofed and clean!  
+To prevent instant re-detection through account or network association, **strictly follow these rules**:
 
 ---
 
 {% hint style="danger" %}
 
-#### 1. Ne vous reconnectez JAMAIS à un ancien compte banni
+#### 1. NEVER log into previously banned accounts
 
-* ❌ **Compte de jeu banni :** (Fortnite / Riot / Epic Games / Steam / EA / Battle.net / Call of Duty / Rust...). Créez toujours un compte 100% neuf !
-* ❌ **Compte Microsoft / Windows :** Ne vous connectez pas avec un ancien compte Microsoft sur votre session Windows fraîche. Utilisez un compte local.
-* ❌ **GeForce Experience / NVIDIA App :** Ne vous connectez pas à votre ancien profil NVIDIA.
-* ❌ **Services Cloud & Stockage :** Ne synchronisez pas d'anciens dossiers OneDrive ou Google Drive.
-* ❌ **Logiciels avec compte utilisateur :** Medal.tv, Discord (si lié en jeu), Razer Synapse, SteelSeries GG, Logitech G Hub. Créez des profils vierges ou ne liez pas vos comptes jeu.
+* ❌ **Game Accounts:** (Fortnite, Valorant, Apex, COD, Rust, etc.). Always create a 100% fresh account!
+* ❌ **Microsoft / Windows Account:** Do not link an old Microsoft account to Windows. Use a local account.
+* ❌ **GeForce Experience / NVIDIA App:** Do not sign into previous profiles.
+* ❌ **Cloud Sync:** Do not sync old OneDrive / Google Drive folders containing cached game logs.
+* ❌ **Gaming Peripherals Software:** Discord, Medal.tv, Razer Synapse, Logitech G Hub. Create fresh profiles.
 
-Même une simple connexion en arrière-plan à l'un de ces services transmet des tokens associés à votre ancien ban et peut faire re-bannir votre PC instantanément !
+Even a single background login can transmit cached tokens and trigger an immediate ban!
 {% endhint %}
 
 ---
 
 {% hint style="warning" %}
 
-#### 2. Ne branchez AUCUN périphérique USB douteux ou banni
+#### 2. Do NOT plug in banned USB devices or external drives
 
-* ❌ **Clé USB bannie :** Ne branchez aucune clé USB qui était insérée lors de votre bannissement.
-* ❌ **Disques externes (HDD / SSD externes) :** Ne reconnectez pas de disques durs secondaires ou externes non formatés ayant servi lors de l'ancien ban.
-* ❌ **Cartes mémoires / Périphériques avec mémoire interne :** Tout périphérique contenant des traces d'anciennes installations doit être reformaté ou évité.
+* ❌ **Banned USB drives:** Do not plug in USB sticks that were connected during previous bans.
+* ❌ **Secondary Drives:** Wipe and format any external or secondary HDD/SSD before connecting them.
 {% endhint %}
 
 ---
 
 {% hint style="info" %}
 
-#### 3. Réseau & Adresse IP (Recommandé)
+#### 3. Network & IP Address
 
-Votre adresse IP publique est souvent consignée par les systèmes anti-triche lors d'un bannissement :
-* **Redémarrez votre Box Internet / Routeur :** Éteignez votre box pendant 5 à 10 minutes pour obtenir une nouvelle adresse IP dynamique.
-* **Si vous avez une IP Fixe :** Utilisez un VPN fiable ou partagez la connexion 4G/5G de votre téléphone portable pour vos premières sessions.
-
-### Recommandations VPN par jeu :
-* **Valorant :** [Cloudflare WARP 1.1.1.1](https://one.one.one.one/) *(recommandé pour certains anti-triches)*
-* **Rust :** [StarVPN](https://www.starvpn.com/) ou [MysteriumVPN](https://www.mysteriumvpn.com/)
-* **Fortnite / Apex Legends / Autres :** [Windscribe](https://fra.windscribe.com/) en mode Stealth ou connexion neuve.
+* **Reboot your Internet Router:** Unplug for 5 to 10 minutes to obtain a fresh dynamic IP address.
+* **If on Static IP:** Use a reliable VPN or mobile 4G/5G tethering.
 {% endhint %}
 
 ---
 
 {% hint style="success" %}
 
-#### 4. Vous êtes prêt à rejouer !
+#### 4. You are ready to play!
 
-Si vous avez respecté :
-1. ✅ Le BIOS configuré et Windows propre (VHD ou RAID)
-2. ✅ Turtle Spoofer appliqué et sérials vérifiés (Étape 7 & 8)
-3. ✅ Nouveau compte + Nouvelle IP / VPN
-
-Votre machine est protégée à 100%. Bon jeu avec **Turtle Spoofer** !
+Enjoy your undetected gaming with **Turtle Spoofer**!
 {% endhint %}
