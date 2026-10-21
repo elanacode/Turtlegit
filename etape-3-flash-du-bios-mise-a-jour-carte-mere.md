@@ -1,24 +1,24 @@
-# Step 3 – BIOS Flash (Update)
+# Step 3 – Flash BIOS (Motherboard Update)
 
-This step updates or restores your motherboard BIOS to a clean firmware version different from your current version, regenerating motherboard hardware identifiers.
+This step involves updating or rolling back your motherboard's BIOS to a different version than your current one in order to regenerate hardware-level identifiers.
 
 {% embed url="https://youtu.be/FK_-7gPMldE" %}
 
 ***
 
 {% hint style="danger" %}
-#### Critical Safety Instructions:
-* **NEVER restart or unplug your PC** while flashing BIOS. Interrupting a flash can permanently brick your motherboard.
-* Always flash to a **different version** than your current BIOS (either one version up or one down).
-* **RAID Users:** Flashing your BIOS resets all BIOS settings to factory defaults. This will cause a Blue Screen (*Inaccessible Boot Device*) if you attempt to boot Windows without re-enabling RAID mode. After flashing, go immediately into the BIOS and switch SATA Mode back to **RAID** and re-enable **NVMe RAID Mode**!
+#### Absolute Safety Rules:
+* **NEVER restart or shut down** your PC while flashing. Interrupting a BIOS flash mid-process can permanently brick your motherboard.
+* Flash to a **different version** than your current BIOS (one version up or one down is fine).
+* **RAID Users:** Flashing the BIOS resets your BIOS settings, causing an *Inaccessible Boot Device* Blue Screen. Go immediately into the BIOS after the flash completes and switch SATA Mode back to RAID and NVMe RAID to Enabled!
 {% endhint %}
 
 ***
 
 {% hint style="success" %}
-#### Pro Tip: TPM Firmware Method (For New TPM Serial)
-Some BIOS updates include an fTPM firmware security patch that regenerates your TPM serial as a side effect.  
-When selecting a BIOS version from your vendor's website, look for entries in the changelog containing:
+#### Pro Tip: TPM Firmware Update Method (New TPM Serial)
+Some BIOS versions contain a security vulnerability patch that completely **regenerates your TPM serial number** as a side effect.  
+When browsing your motherboard vendor's BIOS update list, check the changelog and look for entries containing:
 * `Critical fTPM firmware upgrade, enhancing security`
 * `Improved security by updating TPM firmware`
 * `AMD TPM-B / fTPM firmware and CVE-2025-2884`
@@ -27,11 +27,11 @@ When selecting a BIOS version from your vendor's website, look for entries in th
 
 ***
 
-## Choose your Motherboard Manufacturer:
+## Select the guide corresponding to your motherboard brand:
 
 * [**ASUS (EZ Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/asus-ez-flash.md)
 * [**MSI (M-Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/msi-m-flash.md)
 * [**GIGABYTE (Q-Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/gigabyte-q-flash.md)
 * [**ASRock (Instant Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/asrock-instant-flash.md)
-
-*(For HP or Lenovo pre-built systems and laptops, download the official BIOS updater directly from the brand support portal).*
+* [**HP (OMEN / Victus / Desktops / Laptops)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/hp-bios-update.md)
+* [**LENOVO (Legion / IdeaPad / ThinkPad)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/lenovo-bios-update.md)

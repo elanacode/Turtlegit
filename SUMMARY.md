@@ -15,6 +15,8 @@
   * [MSI (M-Flash)](etape-3-flash-du-bios-mise-a-jour-carte-mere/msi-m-flash.md)
   * [GIGABYTE (Q-Flash)](etape-3-flash-du-bios-mise-a-jour-carte-mere/gigabyte-q-flash.md)
   * [ASRock (Instant Flash)](etape-3-flash-du-bios-mise-a-jour-carte-mere/asrock-instant-flash.md)
+  * [HP (BIOS Update Guide)](etape-3-flash-du-bios-mise-a-jour-carte-mere/hp-bios-update.md)
+  * [LENOVO (BIOS Update Guide)](etape-3-flash-du-bios-mise-a-jour-carte-mere/lenovo-bios-update.md)
 * [Étape 4 – Configurer le BIOS](etape-4-configurer-le-bios.md)
 * [Étape 5 – Réinstallation spéciale de Windows](etape-5-reinstallation-speciale-de-windows.md)
   * [Sans RAID (installation classique)](etape-5-reinstallation-speciale-de-windows/sans-raid-installation-classique.md)

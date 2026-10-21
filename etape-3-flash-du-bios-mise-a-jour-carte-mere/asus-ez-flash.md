@@ -81,4 +81,4 @@ shutdown /r /fw /t 0
 
 
 ### Vidéo Tutoriel (Flash BIOS)
-{% embed url="https://youtu.be/FK_-7gPMldE" %}
+{% embed url="https://www.youtube.com/watch?v=Em7SRaG3L_0" %}
