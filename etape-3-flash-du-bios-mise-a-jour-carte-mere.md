@@ -27,11 +27,11 @@ Lors du choix de votre fichier BIOS sur le site de votre carte mère, vérifiez 
 
 ***
 
-## Sélectionnez le constructeur de votre Carte Mère :
+## Sélectionnez le tutoriel adapté à votre marque :
 
 * [**ASUS (EZ Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/asus-ez-flash.md)
 * [**MSI (M-Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/msi-m-flash.md)
 * [**GIGABYTE (Q-Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/gigabyte-q-flash.md)
 * [**ASRock (Instant Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/asrock-instant-flash.md)
-
-*(Pour les PC portables ou pré-montés HP et Lenovo, téléchargez l'outil de mise à jour BIOS officiel directement depuis le site support de votre marque).*
+* [**HP (OMEN / Victus / Desktops / Laptops)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/hp-bios-update.md)
+* [**LENOVO (Legion / IdeaPad / ThinkPad)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/lenovo-bios-update.md)

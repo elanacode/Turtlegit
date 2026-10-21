@@ -59,4 +59,4 @@ Redémarrez manuellement votre PC et appuyez de façon répétée sur **Suppr**.
 
 
 ### Vidéo Tutoriel (Flash BIOS)
-{% embed url="https://youtu.be/FK_-7gPMldE" %}
+{% embed url="https://www.youtube.com/watch?v=dUCWRqOdLUw" %}
