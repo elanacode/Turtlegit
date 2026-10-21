@@ -64,7 +64,7 @@ Une fois le mode RAID activé et après avoir sauvegardé et redémarré dans le
    *(Attention : cela supprime toutes les données des disques sélectionnés).*
 3. Retournez dans **`Array Management`** ➜ **`Create Array`** :
    * **RAID Level :**
-     * Si vous avez **1 seul disque SSD** : sélectionnez **`RAIDABLE`** ou **`Volume`**.
+     * Si vous avez **1 seul disque SSD** : sélectionnez **`Volume` en priorité absolue** (ou **`RAIDABLE`** uniquement si *Volume* n'est pas présent/disponible dans votre version du BIOS).
      * Si vous avez **2 disques ou plus** : sélectionnez **`RAID0`**.
    * **Select Physical Disks :** entrez dedans, cochez votre ou vos disques SSD (basculer sur **Enabled** ou cocher la case), puis cliquez sur **Apply Changes**.
    * Descendez tout en bas et cliquez sur **`Create Array`**.
