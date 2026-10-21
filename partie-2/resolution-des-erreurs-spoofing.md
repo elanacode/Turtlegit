@@ -17,13 +17,13 @@ Les solutions matérielles ci-dessous permettent de traiter la cause racine déf
 
 ---
 
-## 1. Erreur : EFUSE FULL
+## 1. Erreur : EFUSE FULL (Adresse MAC qui ne change pas)
 
 {% hint style="danger" %}
-#### Que signifie l'erreur EFUSE FULL ?
-Si vous recevez l'erreur `EFUSE FULL` lors du spoofing de l'adresse MAC :  
-Votre carte réseau **Realtek** intégrée a été flashée/modifiée de manière permanente un trop grand nombre de fois. La puce **EFUSE** (la mémoire interne non réinscriptible de la puce Realtek) est totalement saturée.  
-Le câble Ethernet n'est pas en cause : c'est la puce réseau de votre carte mère qui a atteint sa limite physique d'écriture. **Il n'est plus possible de modifier de façon permanente la MAC de cette carte intégrée.**
+#### Que signifie l'erreur EFUSE FULL ou une adresse MAC qui refuse de changer ?
+Si vous recevez l'erreur `EFUSE FULL` lors du spoofing, ou si **votre adresse MAC ne change pas du tout après le spoof** :  
+Cela signifie que vous avez **spoofé le nombre maximum de fois possible l'adresse MAC de votre carte réseau Realtek**.  
+La puce mémoire interne matérielle (**EFUSE**) de la carte réseau intégrée à votre carte mère est définitivement pleine (stockage d'écriture permanent épuisé). Le câble Ethernet n'a aucun rapport avec ce problème. **Cette carte réseau ne peut plus jamais être spoofée de façon permanente.**
 {% endhint %}
 
 ### Solutions recommandées :

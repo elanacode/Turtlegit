@@ -32,6 +32,14 @@ Comparez les valeurs actuelles affichées en rouge et vert avec la photo/capture
 Si tous ces identifiants sont différents de votre ancien écran, votre machine est **100% anonymisée et dé-bannie**.
 {% endhint %}
 
+{% hint style="danger" %}
+#### Que faire si l'adresse MAC ne change pas ?
+Si vous constatez que l'adresse MAC est restée identique à l'ancienne après le spoof :  
+Cela signifie généralement que vous avez **atteint le nombre maximum de modifications physiques permanentes de votre carte réseau Realtek** (saturation de la mémoire physique `EFUSE FULL`).  
+La puce mémoire matérielle de votre carte mère ne peut plus enregistrer de nouvelle adresse MAC.  
+👉 Consultez immédiatement la page **[Résolution des erreurs de Spoofing (EFUSE / Checksum)](resolution-des-erreurs-spoofing.md)** pour appliquer une solution matérielle (adaptateur USB-Ethernet externe UGREEN, carte réseau PCIe dédiée ou partage USB mobile).
+{% endhint %}
+
 {% endstep %}
 
 {% step %}
