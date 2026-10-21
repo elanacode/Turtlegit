@@ -64,7 +64,7 @@ Once RAID mode is enabled and you have saved and rebooted into BIOS, a new menu 
    *(Warning: this completely erases all data on the selected drives).*
 3. Go back to **`Array Management`** ➜ **`Create Array`**:
    * **RAID Level:**
-     * If you have **1 SSD disk**: select **`RAIDABLE`** or **`Volume`**.
+     * If you have **1 SSD disk**: select **`Volume` as absolute priority** (or **`RAIDABLE`** only if *Volume* is not available in your BIOS version).
      * If you have **2 or more disks**: select **`RAID0`**.
    * **Select Physical Disks:** enter the menu, toggle your target SSD(s) to **Enabled** (or check their boxes), then click **Apply Changes**.
    * Scroll down to the bottom and click **`Create Array`**.
