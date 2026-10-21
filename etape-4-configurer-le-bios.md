@@ -41,6 +41,15 @@ This step is **required for Ethernet users**.
 Ethernet allows us to permanently spoof your MAC address. This is not possible on an active Wi-Fi connection.
 {% endhint %}
 
+{% hint style="warning" %}
+#### If you can ONLY use Wi-Fi (No Ethernet available):
+1. Try your best to acquire an Ethernet connection (it offers significantly stronger privacy and ban protection).
+2. If Ethernet is strictly impossible:
+   * Do not disable your Wi-Fi adapter in BIOS.
+   * Disable onboard **LAN (Ethernet)** and **Bluetooth** in your BIOS.
+   * In the spoofer application, navigate to the **Special** tab and use the **Wi-Fi Mac** option (after spoofing your normal serials).
+{% endhint %}
+
 Navigate to the path below for your motherboard brand and set Wi-Fi and Bluetooth to **Disabled**:
 
 * **ASUS:** `Advanced` ➜ `Onboard Devices Configuration` ➜ `Wi-Fi (WLAN) & Bluetooth` ➜ **Disabled**

@@ -76,12 +76,19 @@ To permanently change your router's MAC and ARP tables on hardware level:
 * **High Performance Option:** **GL.iNet GL-MT6000 (Flint 2)** – high-speed router running OpenWRT.
 
 ### C. Free Anti-Track ARP Solution: Mobile USB Tethering
-If you do not have an OpenWRT router and experience unexpected network disconnections:
-1. Disable your onboard LAN controller, Wi-Fi, and Bluetooth in BIOS.
-2. Connect your smartphone to your PC using a direct USB cable.
-3. Enable **USB Tethering**:
-   * **Android:** Settings ➜ Network / Connections ➜ *USB Tethering*. The PC will receive an isolated Ethernet connection with fresh ARP and MAC tables on every reboot (or Developer Mode toggle)!
-   * **iPhone:** Install the iTunes desktop app, plug in your cable, and enable Personal Hotspot. Unplug and replug to renew MAC/ARP.
+This method uses your smartphone as a dedicated mini-hardware router. It costs nothing and produces a completely isolated network interface with renewed hardware identifiers.
+
+1. **BIOS Pre-requisite:** Disable your onboard LAN controller, Wi-Fi, and Bluetooth in BIOS.
+2. **USB Cable:** Use a high-quality full-length charging cable (USB-C to USB-A). Short or poor-quality cables may not carry network data properly.
+3. **Smartphone Configuration:**
+   * **Android:** Plug your phone into your PC and enable **USB Tethering** in the notification bar / Network Settings. The connection will appear as a clean Ethernet interface in Windows (`Win + R` ➜ `ncpa.cpl`). Android will prioritize using your home Wi-Fi network without consuming mobile cellular data.  
+     *To refresh your MAC and ARP table:* Enable **Developer Mode** on Android, and simply reboot your phone.
+   * **iPhone:** Install the iTunes desktop app on your PC, connect your USB cable, and enable Personal Hotspot. Confirm the trust prompt. Note: iPhones will route traffic through your cellular 4G/5G mobile data.  
+     *To refresh your MAC and ARP table:* Simply unplug the USB cable from the PC and plug it back in. A new MAC address and ARP table are automatically generated!
+
+> [!IMPORTANT]
+> **Unexpected in-game disconnects or blocks?**  
+> If you experience sudden disconnects or blocks, it is far more likely caused by a **TPM** or **Disk serial** issue (misconfigured RAID or VHD). Only investigate ARP once you have definitively confirmed that your TPM and disk serials have been changed or spoofed!
 {% endhint %}
 
 ---
