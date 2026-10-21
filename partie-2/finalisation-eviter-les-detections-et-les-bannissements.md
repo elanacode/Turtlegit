@@ -76,12 +76,19 @@ Pour changer définitivement la table ARP et l'adresse MAC du routeur matériell
 * **Option performance :** **GL.iNet GL-MT6000 (Flint 2)** – routeur puissant haute vitesse sous OpenWRT.
 
 ### C. Solution Gratuite Anti-Track ARP : Partage de connexion Mobile (Tethering USB)
-Si vous ne possédez pas de routeur OpenWRT et subissez des déconnexions réseau inexpliquées :
-1. Désactivez votre carte Ethernet, le Wi-Fi et le Bluetooth dans le BIOS.
-2. Branchez votre smartphone à votre PC avec un câble USB direct.
-3. Activez le **Partage de connexion USB** :
-   * **Android :** Paramètres ➜ Réseau / Connexion ➜ *Partage de connexion USB*. L'ordinateur recevra une connexion Ethernet isolée avec une table ARP et une MAC renouvelée à chaque redémarrage (ou en activant le mode développeur) !
-   * **iPhone :** Installez iTunes sur le PC, branchez votre câble et activez le Partage de connexion. Débranchez/rebranchez pour renouveler l'adresse MAC/ARP.
+Cette méthode utilise votre smartphone comme un mini-routeur matériel dédié. Cela ne coûte rien et génère une interface réseau totalement isolée avec de nouveaux identifiants.
+
+1. **Prérequis BIOS :** Désactivez votre contrôleur LAN intégré, le Wi-Fi et le Bluetooth dans le BIOS.
+2. **Câble USB :** Utilisez un câble de charge complet de bonne qualité (USB-C vers USB-A). Les câbles trop courts ou de mauvaise qualité ne transmettent pas les flux de données réseau correctement.
+3. **Configuration Smartphone :**
+   * **Android :** Branchez le téléphone au PC et sélectionnez **Partage de connexion via USB** dans la barre de notifications / Paramètres Réseau. La connexion apparaîtra sous forme d'une interface Ethernet propre dans Windows (`Win + R` ➜ `ncpa.cpl`). Le téléphone utilisera de préférence votre réseau Wi-Fi local sans impacter votre forfait data mobile.  
+     *Pour renouveler votre adresse MAC et votre table ARP :* Activez le **Mode Développeur** sur Android, et redémarrez simplement le téléphone.
+   * **iPhone :** Installez l'application iTunes pour PC, connectez votre câble USB et activez le Partage de connexion. Confirmez l'autorisation sur l'ordinateur. Note : l'iPhone utilisera vos données 4G/5G.  
+     *Pour renouveler votre adresse MAC et votre table ARP :* Débranchez simplement le câble USB du PC et rebranchez-le. Une nouvelle adresse MAC et une nouvelle table ARP sont automatiquement assignées !
+
+> [!IMPORTANT]
+> **Déconnexions ou bans inexpliqués en jeu ?**  
+> Si vous subissez des déconnexions soudaines, il s'agit très souvent d'un problème lié au **TPM** ou au **numéro de série de disque** (RAID/VHD mal configuré). Ne cherchez à diagnostiquer la table ARP que si vous avez formellement vérifié et confirmé que votre TPM et vos disques sont correctement spoofés !
 {% endhint %}
 
 ---

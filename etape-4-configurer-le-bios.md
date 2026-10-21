@@ -41,6 +41,15 @@ Cette étape est **obligatoire si vous utilisez une connexion par câble Etherne
 L'Ethernet permet de spoofer de façon permanente et stable votre adresse MAC, ce qui n'est pas possible sur une puce Wi-Fi intégrée active.
 {% endhint %}
 
+{% hint style="warning" %}
+#### Si vous ne pouvez utiliser QUE le Wi-Fi (Pas d'Ethernet possible) :
+1. Privilégiez au maximum l'obtention d'un câble Ethernet (le niveau de protection et d'anonymisation y est infiniment supérieur).
+2. Si vous n'avez absolument aucune autre possibilité que le Wi-Fi :
+   * Ne désactivez pas votre carte Wi-Fi dans le BIOS.
+   * Désactivez tout de même le contrôleur **LAN (Ethernet)** et le **Bluetooth** dans le BIOS.
+   * Dans l'application de spoofing, rendez-vous dans l'onglet **Special** et utilisez l'option **Wi-Fi Mac** (après avoir spoofé vos numéros de série normaux).
+{% endhint %}
+
 Accédez au chemin suivant selon la marque de votre carte mère et passez les options sur **Disabled** :
 
 * **ASUS :** `Advanced` ➜ `Onboard Devices Configuration` ➜ `Wi-Fi (WLAN) & Bluetooth` ➜ **Disabled**
