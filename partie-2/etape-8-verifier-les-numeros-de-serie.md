@@ -29,6 +29,14 @@ Compare current values with your screenshot from Step 7:
 If these values changed, your PC is **100% unbanned and anonymized**!
 {% endhint %}
 
+{% hint style="danger" %}
+#### What if your MAC Address did not change?
+If you notice that your MAC address remained identical to your original one after spoofing:  
+This usually means that you have **reached the maximum number of permanent hardware modifications on your Realtek network card** (`EFUSE FULL` physical write limit).  
+The onboard hardware storage of your motherboard's network chip is completely exhausted and can no longer accept new permanent MAC writes.  
+👉 Please immediately check our **[Spoofing Errors (EFUSE / Checksum)](resolution-des-erreurs-spoofing.md)** page to apply a recommended hardware solution (UGREEN USB-to-Ethernet adapter, dedicated PCIe NIC, or USB mobile tethering).
+{% endhint %}
+
 {% endstep %}
 
 {% step %}

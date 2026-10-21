@@ -16,13 +16,13 @@ This is a registry-level spoof and may be less reliable for privacy against kern
 
 ---
 
-## 1. EFUSE FULL Error
+## 1. EFUSE FULL Error (MAC Address Not Changing)
 
 {% hint style="danger" %}
-#### What does the EFUSE FULL error mean?
-If you receive the `EFUSE FULL` error during MAC address spoofing, this means:  
-Your Realtek ethernet card has been permanently spoofed too many times. The EFUSE (the card's internal write storage) has been fully consumed. The ethernet cable is not related to this issue. It is the ethernet card physically connected to your motherboard that has this problem.  
-**You will no longer be able to permanently spoof this ethernet card's MAC address.**
+#### What does the EFUSE FULL error or an unchanged MAC address mean?
+If you receive the `EFUSE FULL` error during spoofing, or if **your MAC address refuses to change after spoofing**:  
+This means you have **spoofed your Realtek ethernet card the maximum possible number of times**.  
+The physical internal write memory (**EFUSE**) on your motherboard's ethernet chip has been fully consumed. The ethernet cable has nothing to do with this problem. **You will no longer be able to permanently spoof this onboard ethernet card's MAC address.**
 {% endhint %}
 
 ### Solutions:
