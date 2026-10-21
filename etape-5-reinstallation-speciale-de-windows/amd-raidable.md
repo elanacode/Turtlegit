@@ -1,6 +1,6 @@
-# AMD (RAIDABLE)
+# AMD (RAIDABLE & RAID0)
 
-Cette page est destinée aux utilisateurs de processeurs AMD avec le mode RAID activé dans le BIOS. Elle vous guide étape par étape pour charger les bons pilotes et réussir l’installation propre de Windows.
+Cette page est destinée aux utilisateurs de processeurs AMD (AM4 et AM5) avec le mode RAID activé dans le BIOS. Elle vous guide étape par étape dans la configuration **RAIDXpert2**, la création de l'Array (**Volume / RAIDABLE / RAID0**), et le chargement des bons pilotes lors de l'installation de Windows.
 
 {% embed url="https://youtu.be/ODsYhWsST8s" %}
 
@@ -8,8 +8,8 @@ Cette page est destinée aux utilisateurs de processeurs AMD avec le mode RAID a
 
 {% hint style="danger" %}
 #### Règle Fondamentale pour le RAID :
-1. **Enregistrez vos sérials avant de commencer :** Téléchargez et lancez le script **`diskserial.bat`** (disponible dans notre dossier MEGA). Prenez une capture d'écran claire de vos numéros de série actuels et gardez-la sur votre téléphone pour comparer après !
-2. **Installation obligatoire sous Windows 10 :** La création du support USB RAID doit être faite avec **Windows 10** (l'outil Media Creation Tool Windows 11 cause des erreurs d'array). Vous pourrez mettre à niveau vers Windows 11 avec l'Assistant d'installation une fois le setup fini si vous le souhaitez.
+1. **Enregistrez vos numéros de série avant de commencer :** Téléchargez et lancez le script **`diskserial.bat`** (disponible dans notre dossier MEGA). Prenez une capture d'écran claire de vos numéros de série actuels et gardez-la sur votre téléphone pour comparer après !
+2. **Installation obligatoire sous Windows 10 :** La création du support USB RAID doit être faite avec **Windows 10** (l'outil Media Creation Tool Windows 11 peut corrompre l'array au setup). Vous pourrez mettre à niveau vers Windows 11 avec l'Assistant d'installation une fois le setup terminé si vous le souhaitez.
 3. **Intel Users :** Ne faites **pas** de RAID si vous avez un processeur Intel (les identifiants originaux fuitent sur Intel). Utilisez la méthode **Sans RAID (VHD)** !
 {% endhint %}
 
@@ -49,18 +49,38 @@ Modifiez les options suivantes selon votre fabricant :
 * **GIGABYTE :** `Settings` ➜ `IO Ports` ➜ `SATA Mode` ➜ **RAID**
 * **ASRock :** `Advanced` ➜ `Storage Configuration` ➜ `SATA Mode` ➜ **RAID**
 
-Activez également **NVMe RAID Mode** sur **Enabled**, désactivez **CSM**, puis appuyez sur **F10** pour sauvegarder et redémarrer sur la clé USB.
+Activez également **NVMe RAID Mode** sur **Enabled**, désactivez **CSM**, puis appuyez sur **F10** pour sauvegarder et redémarrer dans le BIOS.
 
 ***
 
-## Étape 4 – Chargement des pilotes pendant l'installation Windows
+## Étape 4 – Configuration RAIDXpert2 dans le BIOS
 
-Lors de l'écran des partitions Windows :
-1. Aucun disque ne s'affiche : c'est parfaitement normal !
-2. Cliquez sur **Charger un pilote** en bas à gauche ➜ **Parcourir**.
-3. Sélectionnez le dossier RAID présent sur votre clé USB.
-4. Chargez les pilotes dans cet ordre précis :
-   1. **`rcbottom.inf`** (AMD-RAID Bottom device)
-   2. **`rcraid.inf`** (AMD-RAID Controller)
-   3. **`rccfg.inf`** (AMD-RAID Config device)
-5. Vos disques et votre array RAID apparaissent immédiatement ! Cliquez sur **Suivant** pour lancer l'installation.
+Une fois le mode RAID activé et après avoir sauvegardé et redémarré dans le BIOS, un nouveau menu apparaît :
+
+1. Allez dans **`Advanced`** ➜ **`RAIDXpert2 Configuration Utility`**.
+2. Entrez dans **`Array Management`** ➜ **`Delete Array`** :
+   * Cochez **Check All** (ou sélectionnez tous les arrays existants).
+   * Cliquez sur **Delete Array(s)** et validez avec **Confirm : Enabled** ➜ **Yes**.  
+   *(Attention : cela supprime toutes les données des disques sélectionnés).*
+3. Retournez dans **`Array Management`** ➜ **`Create Array`** :
+   * **RAID Level :**
+     * Si vous avez **1 seul disque SSD** : sélectionnez **`RAIDABLE`** ou **`Volume`**.
+     * Si vous avez **2 disques ou plus** : sélectionnez **`RAID0`**.
+   * **Select Physical Disks :** entrez dedans, cochez votre ou vos disques SSD (basculer sur **Enabled** ou cocher la case), puis cliquez sur **Apply Changes**.
+   * Descendez tout en bas et cliquez sur **`Create Array`**.
+4. Appuyez sur **F10** pour sauvegarder les modifications et quitter le BIOS.
+
+***
+
+## Étape 5 – Démarrage USB et chargement des pilotes sous Windows
+
+1. Démarrez sur votre clé USB d'installation Windows 10 (`Shift + Redémarrer` ➜ *Utiliser un périphérique*).
+2. Choisissez l'installation personnalisée (**Personnalisé : Installer uniquement Windows**).
+3. À l'écran de sélection des disques : **aucun disque ne s'affiche**, c'est normal car Windows n'intègre pas les contrôleurs RAID AMD natifs.
+4. Cliquez sur **Charger un pilote** en bas à gauche ➜ **Parcourir**.
+5. Naviguez jusqu'au dossier RAID sur votre clé USB et chargez les 3 pilotes dans cet ordre strict :
+   1. **`rcbottom.inf`** *(AMD-RAID Bottom device)*
+   2. **`rcraid.inf`** *(AMD-RAID Controller)*
+   3. **`rccfg.inf`** *(AMD-RAID Config device)*
+6. Dès que le pilote contrôleur est chargé, votre volume / array RAID apparaît immédiatement sous la forme d'un espace non alloué unique !
+7. Sélectionnez-le et cliquez sur **Suivant** pour lancer l'installation propre.

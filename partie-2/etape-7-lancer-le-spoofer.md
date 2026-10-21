@@ -81,7 +81,27 @@ Prenez une capture d'écran de cette page **Device** pour comparer vos anciens e
 
 {% step %}
 
-## 7. Appliquer le Spoof
+## 7. Cas Spécial : PC fixes et Portables HP (Procédure MPM Unlock)
+
+{% hint style="danger" %}
+#### Déverrouillage MPM obligatoire pour les cartes mères HP
+Les machines HP (desktops et laptops OMEN, Victus, Pavilion) verrouillent les numéros de série de la carte mère en mode usine (MPM - Manufacturer Programming Mode).
+
+1. Munissez-vous d'une clé USB vierge formatée en **FAT32**.
+2. Lorsque le logiciel vous demande : *"Have you unlocked MPM?"* :
+   * Si c'est la première fois ou si vous n'avez pas débloqué le MPM ➜ Cliquez sur **NO**.
+   * Le spoofer prépare les fichiers nécessaires sur votre clé USB.
+3. Maintenez la touche **SHIFT** enfoncée et cliquez sur **Redémarrer** dans Windows.
+4. Sélectionnez **Utiliser un périphérique** ➜ Choisissez votre clé USB.
+5. Au démarrage, un écran noir/bleu HP apparaît : *"Manufacturer Programming Mode to unlock mode?"* ➜ Confirmez sur **YES**.
+6. Votre PC redémarre sous Windows : votre carte mère HP est désormais déverrouillée et prête pour le spoofing !
+{% endhint %}
+
+{% endstep %}
+
+{% step %}
+
+## 8. Appliquer le Spoof
 
 1. Cliquez sur l'onglet **Spoofer** en haut au centre.
 2. Cliquez sur le bouton vert **SPOOF (AMI)** (ou *SPOOF TPM* si votre configuration le requiert).
@@ -92,22 +112,15 @@ Prenez une capture d'écran de cette page **Device** pour comparer vos anciens e
 
 {% step %}
 
-## 8. Succès et Redémarrage
+## 9. Succès et Redémarrage
 
 Le spoofer modifie l'ensemble des tables en mémoire et affiche les logs de réussite :
 * `[+] BASEBOARD SERIAL HAS BEEN CHANGED [SUCCESS]`
 * `[+] CHASSIS & SYSTEM SERIALS SPOOFED [SUCCESS]`
 * `[+] SYSTEM UUID HAS BEEN CHANGED [SUCCESS]`
-* `[+] MAC ADDRESS SPOOFED & ADAPTER RESET [SUCCESS]`
-* `[+] WINDOWS MACHINEGUID CLEANED [SUCCESS]`
-* `[+] ARPCACHE & SYSTEM TRACES WIPED [SUCCESS]`
-* `[SUCCESS] HARDWARE SPOOFING APPLIED SUCCESSFULLY!`
+* `[+] MAC ADDRESS SPOOFED [SUCCESS]`
 
-<figure><img src="../assets/turtle_ui/step7_spoofer_success.png" alt="Logs de succès"><figcaption>Validation du spoof dans les logs</figcaption></figure>
-
-{% hint style="danger" %}
-**IMPORTANT :** Redémarrez obligatoirement votre ordinateur (**Restart PC**) comme indiqué par l'application pour que l'ensemble des nouveaux numéros de série soient appliqués définitivement par Windows !
-{% endhint %}
+Redémarrez votre ordinateur lorsque le message vous y invite afin que le BIOS et Windows enregistrent définitivement ces nouveaux identifiants.
 
 {% endstep %}
 {% endstepper %}
