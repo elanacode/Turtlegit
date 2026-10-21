@@ -6,25 +6,56 @@ This step is essential to disable hardware and hypervisor tracking features in y
 
 ***
 
-## Required BIOS Settings
+## 1. Disabling TPM (Trusted Computing)
 
-Access your BIOS (`Del` or `F2`) and ensure the following options are configured:
+Follow the guide for your motherboard brand:
 
-### 1. Security Settings
-* **Secure Boot:** ➜ **Disabled** (or set OS Type to *Other OS*)
-* **CSM (Compatibility Support Module):** ➜ **Disabled** (Pure UEFI Mode)
-* **TPM / fTPM / Intel PTT:** ➜ **Disabled** (if using standard spoofing without hardware TPM module)
+{% tabs %}
+{% tab title="ASUS" %}
+* **Intel:** `Advanced` ➜ `PCH-FW Configuration` ➜ `TPM Device Selection` ➜ **Enable Discrete TPM** (or `Advanced` ➜ `Trusted Computing` ➜ `Security Device Support` ➜ **Disabled**).
+* **AMD:** `Advanced` ➜ `AMD fTPM configuration` ➜ `TPM Device Selection` ➜ **Disabled**.
+{% endtab %}
 
-### 2. CPU & Virtualization
-* **Intel Virtualization Technology (VT-x) / AMD SVM Mode:** ➜ **Disabled**
-* **VT-d / AMD IOMMU:** ➜ **Disabled**
+{% tab title="MSI" %}
+* `Settings` ➜ `Security` ➜ `Trusted Computing` ➜ `Security Device Support` ➜ **Disabled**.
+* `Settings` ➜ `Security` ➜ `Trusted Computing` ➜ `TPM Device Selection` ➜ **dTPM**.
+{% endtab %}
 
-### 3. Integrated Components
-* **Fast Boot:** ➜ **Disabled**
-* **Onboard Wi-Fi / Bluetooth:** ➜ Disable if banned on wireless MAC addresses.
+{% tab title="GIGABYTE" %}
+* **Intel:** `Settings` ➜ `Miscellaneous` ➜ `Intel Platform Trust Technology (PTT)` ➜ **Disabled**.
+* **AMD:** `Settings` ➜ `Miscellaneous` ➜ `AMD CPU fTPM` ➜ **Disabled**.
+{% endtab %}
+
+{% tab title="ASRock" %}
+* `Advanced` ➜ `Trusted Computing` ➜ `Security Device Support` ➜ **Disabled**.
+* `Advanced` ➜ `CPU Configuration` ➜ `AMD fTPM switch` (or `Intel PTT`) ➜ **Disabled**.
+{% endtab %}
+{% endtabs %}
 
 ***
 
-{% hint style="success" %}
-Press **F10** to save settings and exit. Your BIOS is now ready for clean installation.
+## 2. Turn Off Onboard Wi-Fi and Bluetooth
+
+{% hint style="info" %}
+This step is **required for Ethernet users**.  
+Ethernet allows us to permanently spoof your MAC address. This is not possible on an active Wi-Fi connection.
 {% endhint %}
+
+Navigate to the path below for your motherboard brand and set Wi-Fi and Bluetooth to **Disabled**:
+
+* **ASUS:** `Advanced` ➜ `Onboard Devices Configuration` ➜ `Wi-Fi (WLAN) & Bluetooth` ➜ **Disabled**
+* **MSI:** `Advanced` ➜ `Integrated Peripherals` ➜ `Onboard CNVi Module Control` (or `Wi-Fi & Bluetooth Controller`) ➜ **Disabled**
+* **ASRock:** `Advanced` ➜ `Chipset Configuration` ➜ `Onboard WAN Device` (or `WAN Radio & BT On`) ➜ **Disabled**
+* **GIGABYTE:** `Settings` ➜ `IO Ports` (or `Peripherals`) ➜ `Wi-Fi & Bluetooth` ➜ **Disabled**.  
+  *(Note: Most GIGABYTE motherboards do not expose this software toggle. If yours does not, you must **physically remove the Wi-Fi card** from the motherboard).*
+
+***
+
+## 3. Other Essential BIOS Settings
+
+* **Secure Boot:** ➜ **Disabled** (or set OS Type to *Other OS*).
+* **CSM (Compatibility Support Module):** ➜ **Disabled** (Pure UEFI Mode).
+* **CPU Virtualization (Intel VT-x / AMD SVM):** ➜ **Disabled**.
+* **Fast Boot:** ➜ **Disabled**.
+
+Press **F10** to save settings and exit. Your BIOS is now ready for clean installation!

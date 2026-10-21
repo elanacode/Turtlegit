@@ -45,7 +45,10 @@ Select **USB flash drive** and click **Next**.
 
 ## Select your USB Drive
 
-Select your USB flash drive (at least 8 GB). **Warning:** All existing files on this USB drive will be permanently erased. Click **Next**.
+Select your USB flash drive (at least 8 GB).  
+{% hint style="danger" %}
+All existing files on this USB drive will be permanently erased.
+{% endhint %}
 
 <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FGhPDY0uL2h9tF9bmJzQK%2FSetupHost_Rk6bK2HvgA.png?alt=media&amp;token=b0673d3d-c1a7-47b7-84bc-5b4d7c716ea6" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -54,15 +57,13 @@ Select your USB flash drive (at least 8 GB). **Warning:** All existing files on 
 
 ## Wait for Completion
 
-The creation process takes approximately 10 to 15 minutes. Do not disconnect the drive.
+The creation process takes approximately 10 to 15 minutes. Once finished, click **Finish**.
 
 <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FZFqgBjC7qAB6b8j9hwkC%2FSetupHost_ZWgQRyKS4y.png?alt=media&amp;token=148bed06-eab6-4c25-8cc5-0c17039a5d22" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-Your Windows 10 USB drive is ready once this screen appears.
-{% endhint %}
 {% endstep %}
 {% endstepper %}
+
+***
 
 ## Adding Supplementary Files to USB
 
@@ -78,10 +79,23 @@ Open File Explorer, go to **This PC**, and open your USB flash drive.
 
 {% step %}
 
-## Copy autounattend.xml and Network Drivers
+## Copy autounattend.xml and Drivers
 
 Copy **`autounattend.xml`** directly to the root of your USB flash drive alongside your network installer.
 
 <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FYX8CGHxFv0yTmWmlyD0k%2Fbrave_4ykNOQvaiJ.gif?alt=media&amp;token=12cf32fa-c689-46f4-b4ce-a64f11e9a435" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
+
+***
+
+## How to Boot the USB Flash Drive & Delete Partitions
+
+1. While holding down the **SHIFT** key on your keyboard, click **Start ➜ Power ➜ Restart** (keep holding Shift until the blue options screen appears).
+2. On the blue screen, select **Use a device** ➜ select your USB flash drive (listed as *UEFI Removable Device* or your USB drive model name).  
+*(If this option does not appear, enter your BIOS and set your USB drive to #1 in the Boot Priority order).*
+3. Click **Install Now** and select your language.
+4. When prompted, select **Custom: Install Windows only (advanced)**.
+5. **Partition Deletion:** On the partitions screen, click **Delete** on every single partition until every drive displays only **Drive X Unallocated Space**.
+   * *If you have multiple drives (SSD + HDD), make sure to select the SSD's unallocated space before clicking Next, otherwise Windows will install to the HDD.*
+6. Click **Next** to start the clean Windows installation!

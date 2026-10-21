@@ -45,16 +45,25 @@ Select your USB flash drive (min 8 GB). All data will be wiped. Click **Next**.
 
 ## Wait for Completion
 
-The setup will download and flash Windows 11 onto your drive.
+The setup will download and flash Windows 11 onto your drive. Click **Finish**.
 
 <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F9cDuuO2QkURj6EpxjvmF%2FSetupHost_KHV72zCg6c.png?alt=media&amp;token=09c85023-e18e-4363-8a35-fe42dfaa2088" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-Your Windows 11 USB flash drive is ready!
-{% endhint %}
 {% endstep %}
 {% endstepper %}
 
+***
+
 ## Adding Supplementary Files to USB
 
-Copy **`autounattend.xml`** directly to the root of your USB flash drive to bypass Windows 11 TPM and Microsoft account requirements.
+Copy **`autounattend.xml`** from our MEGA folder directly to the root of your USB flash drive alongside your network driver installer.
+
+***
+
+## Booting USB & Clean Installation
+
+1. Hold **SHIFT** and click **Restart** in Windows.
+2. Choose **Use a device ➜ your USB drive**.
+3. Click **Install Now** ➜ select **Custom: Install Windows only (advanced)**.
+4. **Delete Partitions:** Delete all existing drive partitions until you only see unallocated space.  
+*(Note: on Windows 11, the USB's `ESD-USB` partition will also appear; do not attempt to delete it).*
+5. Select your SSD's unallocated space and click **Next**!
