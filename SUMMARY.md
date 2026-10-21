@@ -26,4 +26,5 @@
 * [Étape 6 – Préparation du système (Defender)](partie-2/etape-6-preparation-du-systeme.md)
 * [Étape 7 – Lancer le Spoofer](partie-2/etape-7-lancer-le-spoofer.md)
 * [Étape 8 – Vérifier les numéros de série](partie-2/etape-8-verifier-les-numeros-de-serie.md)
+* [Résolution des erreurs de Spoofing (EFUSE / Checksum)](partie-2/resolution-des-erreurs-spoofing.md)
 * [Finalisation – Éviter les détections](partie-2/finalisation-eviter-les-detections-et-les-bannissements.md)
