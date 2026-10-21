@@ -1,70 +1,37 @@
-# Étape 3 – Flash du BIOS (mise à jour carte mère)
+# Étape 3 – Flash du BIOS (Mise à jour carte mère)
 
-Cette étape consiste à mettre à jour ou restaurer le BIOS de votre carte mère avec la version correcte, en fonction du modèle identifié à l’étape précédente (MSINFO32).
+Cette étape consiste à mettre à jour ou restaurer le BIOS de votre carte mère avec une version différente de votre version actuelle, afin de régénérer les identifiants matériels au niveau micro-logiciel.
 
-{% embed url="<https://youtu.be/ScVBLZOPuXw>" %}
-
-***
-
-### Exemple concret : contenu de la clé USB
-
-```
-└── (Clé USB)
-    ├── boot
-    ├── efi
-    ├── sources
-    ├── support
-    ├── autorun.inf
-    ├── autounattend.xml
-    ├── bootmgr
-    ├── bootmgr.efi
-    ├── setup.exe
-    ├── Realtek.exe         ← ou 3DP_Net (Intel & All).exe
-    └── FICHIER_BIOS.CAP (ou .bin / .rom selon constructeur)
-```
-
-> **Utilisez la même clé que pour l’installation de Windows.**\
-> Il suffit simplement **d’ajouter votre fichier BIOS** à la racine.
-
-{% hint style="info" %}
-**Remarque importante :**\
-Il est inutile de formater ou de vider la clé. Le fichier BIOS peut coexister avec Windows, le fichier autounattend et le pilote Ethernet.
-{% endhint %}
-
-***
-
-### Téléchargement du fichier BIOS officiel
-
-{% hint style="warning" %}
-Le fichier BIOS dépend **du modèle exact de votre carte mère**, détecté à l'étape précédente (MSINFO32 + BIOS).
-{% endhint %}
-
-* Rendez-vous sur le **site officiel du constructeur** :
-  * [**MSI Support**](https://fr.msi.com/support/mb)
-  * [**ASUS Support**](https://www.asus.com/fr/support/?id=1156)
-  * [**Gigabyte Support**](https://www.gigabyte.com/fr/Support/Consumer)
-  * [**ASRock Support**](https://www.asrock.com/support/index.asp)
-
-***
-
-### À propos des formats de fichiers
-
-> Le fichier BIOS peut être de format `.CAP`, `.BIN`, `.ROM`, etc.\
-> Cela dépend de votre constructeur. **Ne renommez jamais le fichier vous-même.**
+{% embed url="https://youtu.be/FK_-7gPMldE" %}
 
 ***
 
 {% hint style="danger" %}
-
-#### **Attention particulière pour les cartes mères ASUS**
-
-Dans la majorité des cas, vous devez impérativement flasher une version de BIOS **antérieure à 2022** (ex : 2021, 2020...) afin d’éviter les protections récentes qui bloquent certaines opérations système.
-
-**Exceptions** : Si votre carte mère ASUS appartient à l’un des chipsets suivants, vous pouvez ignorer cette contrainte :
-
-`B560, B660, B760, B860, H410, H510, H610, X670, X870, B650, Z590, Z690, Z790`
+#### Règles absolues de sécurité :
+* **Ne JAMAIS éteindre ou débrancher** votre PC pendant le flash du BIOS sous peine de rendre votre carte mère inutilisable (brick).
+* Choisissez une version **différente** de votre BIOS actuel (soit une version plus récente, soit une version antérieure).
+* **Utilisateurs RAID :** Le flash du BIOS réinitialise vos réglages. Vous aurez un écran bleu (*Inaccessible Boot Device*) si vous démarrez sans réactiver le mode RAID dans le BIOS. Retournez immédiatement dans le BIOS après le flash pour remettre SATA Mode sur RAID et NVMe RAID sur Enabled !
 {% endhint %}
 
+***
 
-### Vidéo Tutoriel (Flash BIOS)
-{% embed url="https://youtu.be/FK_-7gPMldE" %}
+{% hint style="success" %}
+#### Astuce Pro : Méthode Firmware TPM (Pour un nouveau serial TPM)
+Certaines versions de BIOS intègrent un correctif de sécurité du micro-logiciel fTPM qui a pour effet secondaire de **régénérer entièrement le numéro de série de votre TPM**.  
+Lors du choix de votre fichier BIOS sur le site de votre carte mère, vérifiez le journal des modifications (Changelog) et privilégiez une version contenant l'une de ces mentions :
+* `Critical fTPM firmware upgrade, enhancing security`
+* `Improved security by updating TPM firmware`
+* `AMD TPM-B / fTPM firmware and CVE-2025-2884`
+* `Updated fTPM version`
+{% endhint %}
+
+***
+
+## Sélectionnez le constructeur de votre Carte Mère :
+
+* [**ASUS (EZ Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/asus-ez-flash.md)
+* [**MSI (M-Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/msi-m-flash.md)
+* [**GIGABYTE (Q-Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/gigabyte-q-flash.md)
+* [**ASRock (Instant Flash)**](etape-3-flash-du-bios-mise-a-jour-carte-mere/asrock-instant-flash.md)
+
+*(Pour les PC portables ou pré-montés HP et Lenovo, téléchargez l'outil de mise à jour BIOS officiel directement depuis le site support de votre marque).*

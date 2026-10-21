@@ -1,148 +1,66 @@
 # AMD (RAIDABLE)
 
-Cette page est destinée aux utilisateurs AMD avec le mode RAID activé dans le BIOS. Elle vous guide étape par étape pour charger les bons pilotes et réussir l’installation de Windows.
+Cette page est destinée aux utilisateurs de processeurs AMD avec le mode RAID activé dans le BIOS. Elle vous guide étape par étape pour charger les bons pilotes et réussir l’installation propre de Windows.
 
-{% embed url="<https://youtu.be/nGCS6J2T-pE>" %}
-
-{% hint style="info" %}
-Le mode RAID est souvent activé sur certaines machines AMD (AM4 / AM5). Si vous ne chargez pas les bons pilotes RAID pendant l’installation de Windows, **aucun disque ne s’affichera**.
-{% endhint %}
+{% embed url="https://youtu.be/ODsYhWsST8s" %}
 
 ***
 
 {% hint style="danger" %}
-
-#### Important — Installation Windows 11 en mode RAID
-
-Utilisez impérativement le fichier `autounattend.xml` spécial RAID pour Windows 11.
+#### Règle Fondamentale pour le RAID :
+1. **Enregistrez vos sérials avant de commencer :** Téléchargez et lancez le script **`diskserial.bat`** (disponible dans notre dossier MEGA). Prenez une capture d'écran claire de vos numéros de série actuels et gardez-la sur votre téléphone pour comparer après !
+2. **Installation obligatoire sous Windows 10 :** La création du support USB RAID doit être faite avec **Windows 10** (l'outil Media Creation Tool Windows 11 cause des erreurs d'array). Vous pourrez mettre à niveau vers Windows 11 avec l'Assistant d'installation une fois le setup fini si vous le souhaitez.
+3. **Intel Users :** Ne faites **pas** de RAID si vous avez un processeur Intel (les identifiants originaux fuitent sur Intel). Utilisez la méthode **Sans RAID (VHD)** !
 {% endhint %}
 
-{% embed url="<https://mega.nz/folder/3ThjzYZb#4Sjx9Ee23BHB3apJa2hrLA>" %}
-autounattend.xml
+***
+
+## Étape 1 – Vérifier votre processeur (AM4 ou AM5)
+
+1. Ouvrez le **Gestionnaire des tâches** (`Ctrl + Maj + Échap`).
+2. Allez dans l'onglet **Performances** ➜ **Processeur**.
+3. Vérifiez votre modèle :
+   * **AM4 :** Séries Ryzen 1000, 2000, 3000, 4000, 5000 (ex : *Ryzen 5 5600X*).
+   * **AM5 :** Séries Ryzen 7000, 8000, 9000 (ex : *Ryzen 7 7800X3D*).
+
+***
+
+## Étape 2 – Préparer les pilotes RAID sur votre Clé USB
+
+1. Ouvrez notre dossier MEGA :
+{% embed url="https://mega.nz/folder/3ThjzYZb#4Sjx9Ee23BHB3apJa2hrLA" %}
+Pilotes AMD RAID & autounattend.xml
 {% endembed %}
+2. Téléchargez l'archive correspondant à votre génération :
+   * **AM4 :** Téléchargez `AMD RAID Drivers.rar` et extrayez le dossier `AM4 - RAID` sur votre clé USB.
+   * **AM5 :** Téléchargez `AM5 RAID [PUT IN USB].rar` et extrayez le dossier `AM5 - RAID` sur votre clé USB.
 
-***
-
-## Étape 1 – Vérifier votre processeur
-
-1. Ouvrez le **Gestionnaire des tâches** (`clic droit` sur la barre des tâches ➜ `Gestionnaire des tâches`).
-2. Allez dans l’onglet `Performances`.
-3. Cliquez sur `Processeur`.
-4. Vérifiez si vous avez un processeur **AM4** ou **AM5** (ex. Ryzen 5 5600 ➜ AM4, Ryzen 7 7800X3D ➜ AM5).
-
-> Tout processeur Ryzen qui ressemble à : Ryzen 7000+ sera AM5.
-
-***
-
-## Étape 2 – Extraire les drivers RAID dans la clé USB
-
-1. Téléchargez les fichiers RAID depuis le dossier MEGA
-
-{% file src="/files/ge9NdwlJpu5Ms1xtpEiW" %}
-AM4 & AM5
-{% endfile %}
-
-1. Copiez **le bon dossier** (`AM4 - RAID` ou `AM5 - RAID`) dans votre **clé USB d’installation Windows**.\
-   Vous devez obtenir quelque chose comme :
-
-```
-└── (Clé USB)
-    ├── boot
-    ├── efi
-    ├── sources
-    ├── support
-    ├── autorun.inf
-    ├── autounattend.xml
-    ├── bootmgr
-    ├── bootmgr.efi
-    ├── setup.exe
-    ├── Realtek.exe         ← ou 3DP_Net (Intel & All).exe
-    └── AM4 - RAID          ← ou AM5 - RAID
-```
-
-> Assurez-vous que le contenu est bien **extrait** (ne laissez pas le fichier en `.zip`).
+*(Note : Veillez à ce que le dossier soit bien extrait et non sous forme d'archive compressée .zip/.rar sur la clé USB).*
 
 ***
 
 ## Étape 3 – Activer le mode RAID dans le BIOS
 
-Redémarrez et entrez dans votre BIOS.\
-Repérez et modifiez les options suivantes :
+Redémarrez et accédez à votre BIOS (`Suppr` ou `F2`).  
+Modifiez les options suivantes selon votre fabricant :
 
-<table data-full-width="true"><thead><tr><th>Carte mère</th><th>Menu à ouvrir</th><th>Emplacement RAID</th></tr></thead><tbody><tr><td>ASUS</td><td><code>Advanced ➜ SATA Configuration</code></td><td><code>SATA Mode ➜ RAID</code></td></tr><tr><td>GIGABYTE</td><td><code>Settings ➜ IO Ports</code></td><td><code>SATA Mode ➜ RAID</code></td></tr><tr><td>ASRock</td><td><code>Advanced ➜ Storage Config</code></td><td><code>SATA Mode ➜ RAID</code></td></tr><tr><td>MSI</td><td><code>Advanced ➜ Integrated Peripherals</code></td><td><code>SATA Mode ➜ RAID</code></td></tr></tbody></table>
+* **ASUS :** `Advanced` ➜ `SATA Configuration` ➜ `SATA Mode` ➜ **RAID**
+* **MSI :** `Settings` ➜ `Advanced` ➜ `Integrated Peripherals` ➜ `SATA Mode` ➜ **RAID**
+* **GIGABYTE :** `Settings` ➜ `IO Ports` ➜ `SATA Mode` ➜ **RAID**
+* **ASRock :** `Advanced` ➜ `Storage Configuration` ➜ `SATA Mode` ➜ **RAID**
 
-Ensuite :
-
-* Activez `NVMe Mode` si présent ➜ `Enabled`
-* Désactivez `CSM` si activé ➜ `Disabled`
-* Sauvegardez (F10) et redémarrez
-
-> Si vous ne voyez pas vos disques, revenez dans le BIOS et vérifiez que **UEFI** est bien activé.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FA6GlJWDrjQrJVEAZU808%2Fimage.png?alt=media&amp;token=a464d654-1c85-4560-9b8b-e264d2a19382" alt=""><figcaption></figcaption></figure>
+Activez également **NVMe RAID Mode** sur **Enabled**, désactivez **CSM**, puis appuyez sur **F10** pour sauvegarder et redémarrer sur la clé USB.
 
 ***
 
-## Étape 4 – Supprimer les disques (RAIDXpert2)
+## Étape 4 – Chargement des pilotes pendant l'installation Windows
 
-Dans le BIOS :
-
-1. Allez dans le menu `Advanced ➜ RAIDXpert2 Configuration Utility`
-2. Entrez dans :\
-   `Array Management`
-3. Cliquez sur `Delete Array`\
-   (sélectionnez **tous** les disques visibles)
-
-> Cette action efface **tout**. Confirmez uniquement si vous êtes prêt.
-
-<div><figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FF4217oRXjEY8QBfyKWL9%2Fimage.png?alt=media&amp;token=7853619a-046a-40e4-8a47-f23942ce224d" alt=""><figcaption><p>Delete Array</p></figcaption></figure> <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FN4rLMaZMF5r1VIJGlOlV%2Fimage.png?alt=media&amp;token=896ce53b-846c-48b8-881b-4cf70e1da4a2" alt=""><figcaption><p>Check All <code>➜</code> Delete Array(s)</p></figcaption></figure></div>
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FXQ4vr88UtDpxPMCRkqF8%2Fimage.png?alt=media&amp;token=794490b3-999a-4c0a-a8d5-fad53a03ec00" alt=""><figcaption><p>Confirm - <code>Enabled</code> <code>➜</code> YES</p></figcaption></figure>
-
-***
-
-## Étape 5 – Créer un nouvel array RAID
-
-Dans le même menu (`RAIDXpert2`) :
-
-1. Allez dans `Array Management ➜ Create Array`
-2. Sélectionnez :
-   * `Raid Level` ➜ **RAIDABLE/RAID0**
-   * `Physical Disks` ➜ cochez votre/vos disque(s)
-   * Cliquez sur `Apply Changes`, puis sur `Create Array`
-
-> Si vous avez plusieurs disques, effectuez un **RAID0**.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F4TiOkO3JRWB96rDpozEe%2Fimage.png?alt=media&amp;token=6d4076c2-fb69-41de-94f3-11f59084b2df" alt="" width="375"><figcaption></figcaption></figure>
-
-<div><figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FNkXjchORtQcDdehTvYUZ%2Fimage.png?alt=media&amp;token=74d0e37e-e7b0-4b1f-87fc-65a02fd02021" alt=""><figcaption></figcaption></figure> <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FFjYHpuO5vn6sYRM2Kyle%2Fimage.png?alt=media&amp;token=f7b02c8c-dfcd-4cc2-83ce-bff95521a30a" alt=""><figcaption></figcaption></figure></div>
-
-***
-
-## Étape 6 – Installer Windows avec les bons pilotes
-
-1. Redémarrez avec votre clé USB branchée.
-2. Avancez jusqu’à l’écran `Où souhaitez-vous installer Windows ?`
-3. Cliquez sur `Charger un pilote`
-4. Naviguez dans votre clé USB (dossier contenant les fichiers extraits)
-5. Chargez :
-   * D’abord le fichier **AMD-RAID Bottom Device**
-   * Puis le fichier **AMD-RAID Controller**
-6. Le disque RAID va apparaître ➜ sélectionnez-le
-7. Continuez l’installation de Windows normalement
-
-***
-
-## Vérification finale après installation
-
-1. Une fois Windows installé :
-   * Faites `clic droit` ➜ `Gestionnaire des tâches`
-   * Onglet `Performances` ➜ `Disque (C:)`
-2. En haut à droite, vous devez voir écrit :\
-   **AMD-RAID Array X** ou **SCSI Disk Device**
-
-> Si ce n’est pas le cas, l’installation n’a pas chargé les bons pilotes RAID. Reprenez depuis l’étape 2.
-
-
-### Vidéo Tutoriel (Configuration RAID)
-{% embed url="https://youtu.be/ODsYhWsST8s" %}
+Lors de l'écran des partitions Windows :
+1. Aucun disque ne s'affiche : c'est parfaitement normal !
+2. Cliquez sur **Charger un pilote** en bas à gauche ➜ **Parcourir**.
+3. Sélectionnez le dossier RAID présent sur votre clé USB.
+4. Chargez les pilotes dans cet ordre précis :
+   1. **`rcbottom.inf`** (AMD-RAID Bottom device)
+   2. **`rcraid.inf`** (AMD-RAID Controller)
+   3. **`rccfg.inf`** (AMD-RAID Config device)
+5. Vos disques et votre array RAID apparaissent immédiatement ! Cliquez sur **Suivant** pour lancer l'installation.

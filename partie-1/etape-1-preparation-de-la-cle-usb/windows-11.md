@@ -1,6 +1,6 @@
 # Windows 11
 
-Cette section permet de créer une clé USB Windows 11 officielle, prête à être utilisée pour une réinstallation propre, avec tous les fichiers nécessaires déjà intégrés.
+Cette section permet de créer une clé USB Windows 11 officielle, prête à être utilisée pour une réinstallation propre.
 
 {% embed url="https://youtu.be/y50jaVkskIU" %}
 
@@ -9,102 +9,61 @@ Cette section permet de créer une clé USB Windows 11 officielle, prête à êt
 
 ## Lancer l'outil
 
-Double-clique sur **`MediaCreationTool.exe`**. Une fenêtre **Microsoft** s'ouvre.
+Double-clique sur **`mediacreationtool.exe`**. Clique sur **Accepter** pour valider le contrat de licence.
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FarLQWgF4KHyI1JA9BqmB%2Fexplorer_VdxFYIMfma.png?alt=media&amp;token=123c858f-c9c0-4047-b3f9-9bb3a369ea47" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FAhS4dzZEttn7ITQefk0q%2FSetupHost_ySvr140Ekt.png?alt=media&amp;token=5c8b2aa4-f4aa-49c8-9990-256dfbf62cba" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 
-## Accepter les termes
+## Choisir l'édition
 
-Clique sur **Accepter** pour valider le contrat de licence.
+Sélectionne **Windows 11** puis clique sur **Suivant**.
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FAhS4dzZEttn7ITQefk0q%2FSetupHost_ySvr140Ekt.png?alt=media&amp;token=7dcacc17-5f01-4a7d-8e04-cb74a3d22afd" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2Fh8vgWMbVC4xYk57O18Pl%2FSetupHost_vN9zK6PCI1.png?alt=media&amp;token=db4a2e57-1981-423c-a9fe-c6ef6e6df6ee" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 
-## Garder les options par défaut
+## Sélectionner Disque mémoire flash USB
 
-Laisse les options telles quelles : **français (France),** **Windows 10**.
+Choisis **Disque mémoire flash USB** puis clique sur **Suivant**.
 
-Clique sur **Suivant**.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FwbZ1Ulm5rKQ9cyPMYSaI%2Fimage.png?alt=media&amp;token=ca372565-cfb0-4a99-9572-1fc504b050fb" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-
-## Choisir le type de support
-
-Sélectionne **Disque mémoire flash USB**.
-
-Clique sur **Suivant**.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F9cDuuO2QkURj6EpxjvmF%2FSetupHost_KHV72zCg6c.png?alt=media&amp;token=3952b41e-7af8-4ca2-a179-a9e6e1319dcd" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FKnJBbTolW0meeb7bMUZS%2FSetupHost_rSDC8vB6zT.png?alt=media&amp;token=547c617b-d7d8-4f51-b0a3-2ff92451be80" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 
 ## Sélectionner la clé USB
 
-Choisis ta clé USB dans la liste. Elle doit avoir **au moins 8 Go**.
+Sélectionne ta clé USB (au moins 8 Go). Toutes les données seront effacées. Clique sur **Suivant**.
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FkdwLa576wrh0vnov6WBQ%2FSetupHost_3kdN7WhyjK.png?alt=media&amp;token=459130ef-cfe5-4b64-a030-4707153e395a" alt=""><figcaption></figcaption></figure>
-
-{% hint style="danger" %}
-Toutes les **données** de la **clé** seront **supprimées**. **Sauvegarde-les** avant de continuer si besoin.
-{% endhint %}
+<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FkdwLa576wrh0vnov6WBQ%2FSetupHost_3kdN7WhyjK.png?alt=media&amp;token=7651a3f6-ae97-40c2-9e9d-c50ef50d2979" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
 
-## Lancer la création
+## Patienter et terminer
 
-Clique sur **Suivant** pour démarrer le téléchargement et la création de la clé.
+L'outil télécharge et écrit Windows 11 sur ta clé. Une fois terminé, clique sur **Terminer**.
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FY0eGUbWvrJ22Xsn0r7Yf%2FSetupHost_HeZcSyWxuy.png?alt=media&amp;token=2aed2234-d3f9-4e74-8477-a32dcb3f2139" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-
-## Patienter
-
-Le processus dure environ **10** à **15 minutes**.
-
-<div><figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2Fh8vgWMbVC4xYk57O18Pl%2FSetupHost_vN9zK6PCI1.png?alt=media&amp;token=0503fb9c-5ea3-4bb2-bed2-649cae79fa77" alt=""><figcaption></figcaption></figure> <figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FKnJBbTolW0meeb7bMUZS%2FSetupHost_rSDC8vB6zT.png?alt=media&amp;token=2c320292-4a1b-4729-8b6c-e30d4c82fc04" alt=""><figcaption></figcaption></figure></div>
-
-{% hint style="warning" %}
-Ne **débranche pas** la clé USB avant la fin.
-{% endhint %}
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2Fk0g0EGr5dgtPlWutoLii%2FSetupHost_MTFttyVlqJ.png?alt=media&amp;token=08030b2d-94c1-4177-9545-d1620d5fb71c" alt=""><figcaption></figcaption></figure>
-
-{% hint style="success" %}
-Ta **clé USB** est **prête** dès que cet écran s'affiche.
-{% endhint %}
+<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F9cDuuO2QkURj6EpxjvmF%2FSetupHost_KHV72zCg6c.png?alt=media&amp;token=09c85023-e18e-4363-8a35-fe42dfaa2088" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
+
+***
 
 ## Ajout des fichiers complémentaires sur la clé
 
-{% stepper %}
-{% step %}
+Glisse le fichier **`autounattend.xml`** téléchargé sur le dossier MEGA ainsi que votre installeur de pilote réseau à la racine de la clé USB.
 
-## Ouvrir la clé USB
+***
 
-Ouvre l'explorateur de fichiers, puis ta clé USB dans **Ce PC**.
+## Comment Démarrer (Booter) et Installer Windows 11
 
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2F3bHZsxnfwj6jL5s2gVWC%2Fexplorer_zNujTY2Jvm.png?alt=media&amp;token=4675a39c-51ee-4239-a14f-10e8179451b4" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-
-{% step %}
-
-## Copier autounattend.xml
-
-Glisse le fichier téléchargé à [Étape 1 – Préparation de la clé USB](../../partie-1/etape-1-preparation-de-la-cle-usb.md#fichiers-requis) dans la clé USB.
-
-<figure><img src="https://880056835-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FxrhcMZxpTwuFlSlIEuXp%2Fuploads%2FZA9jyWrBxTsCPhLK9Pdy%2Fbrave_NSF6LBvKQN.gif?alt=media&amp;token=f7dbccfc-5d38-42ef-9097-f52bd8ee2181" alt=""><figcaption></figcaption></figure>
-{% endstep %}
-{% endstepper %}
+1. Maintenez **MAJ (SHIFT)** enfoncé et cliquez sur **Redémarrer** dans Windows.
+2. Choisissez **Utiliser un périphérique ➜ votre clé USB**.
+3. Cliquez sur **Installer maintenant**, puis choisissez **Personnalisé : installer uniquement Windows (avancé)**.
+4. **Suppression des partitions :** Supprimez toutes les partitions de vos disques pour n'avoir que de l'espace non alloué.  
+*(Note : sous Windows 11, la partition de la clé USB nommée `ESD-USB` peut apparaître : c'est normal, ne tentez pas de la supprimer).*
+5. Sélectionnez votre SSD principal et cliquez sur **Suivant** !
