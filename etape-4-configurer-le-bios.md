@@ -6,29 +6,47 @@ This step is essential to disable hardware and hypervisor tracking features in y
 
 ***
 
-## 1. Disabling TPM (Trusted Computing)
+## 1. TPM Management & Disable Guide (Trusted Computing)
 
-Follow the guide for your motherboard brand:
+{% hint style="info" %}
+#### General TPM Rule:
+* **If your game does not require TPM (e.g. Fortnite, Apex Legends, Rust, CoD...):** We strongly recommend **disabling TPM** in the BIOS. This completely prevents hardware TPM identifier tracking!
+* **If your game strictly mandates an active TPM (e.g. Valorant / Vanguard, FaceIT):** Keep TPM enabled, but make sure you have flashed a BIOS version with an fTPM firmware patch (see Step 3) or use the **SPOOF TPM** button in the spoofer.
+{% endhint %}
+
+Follow the instructions and embedded video guides below to disable TPM on your motherboard brand:
 
 {% tabs %}
 {% tab title="ASUS" %}
 * **Intel:** `Advanced` ➜ `PCH-FW Configuration` ➜ `TPM Device Selection` ➜ **Enable Discrete TPM** (or `Advanced` ➜ `Trusted Computing` ➜ `Security Device Support` ➜ **Disabled**).
 * **AMD:** `Advanced` ➜ `AMD fTPM configuration` ➜ `TPM Device Selection` ➜ **Disabled**.
+
+{% embed url="https://streamable.com/sicp16" %}
+*ASUS Video Guide (Intel: 00:00 · AMD: 01:20)*
 {% endtab %}
 
 {% tab title="MSI" %}
 * `Settings` ➜ `Security` ➜ `Trusted Computing` ➜ `Security Device Support` ➜ **Disabled**.
 * `Settings` ➜ `Security` ➜ `Trusted Computing` ➜ `TPM Device Selection` ➜ **dTPM**.
+
+{% embed url="https://streamable.com/n7q3dk" %}
+*MSI Video Guide (Intel: 00:00 · AMD: 01:05)*
 {% endtab %}
 
 {% tab title="GIGABYTE" %}
 * **Intel:** `Settings` ➜ `Miscellaneous` ➜ `Intel Platform Trust Technology (PTT)` ➜ **Disabled**.
 * **AMD:** `Settings` ➜ `Miscellaneous` ➜ `AMD CPU fTPM` ➜ **Disabled**.
+
+{% embed url="https://streamable.com/1qhn35" %}
+*GIGABYTE Video Guide (Intel: 00:00 · AMD: 01:50)*
 {% endtab %}
 
 {% tab title="ASRock" %}
 * `Advanced` ➜ `Trusted Computing` ➜ `Security Device Support` ➜ **Disabled**.
 * `Advanced` ➜ `CPU Configuration` ➜ `AMD fTPM switch` (or `Intel PTT`) ➜ **Disabled**.
+
+{% embed url="https://streamable.com/ec8u3s" %}
+*ASRock Video Guide (Intel: 00:00 · AMD: 01:35)*
 {% endtab %}
 {% endtabs %}
 
