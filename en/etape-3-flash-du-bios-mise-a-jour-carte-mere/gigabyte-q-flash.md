@@ -1,63 +1,54 @@
 # GIGABYTE (Q-Flash)
 
-Page de mise à jour du BIOS pour les cartes mères GIGABYTE via l’outil Q-Flash.
+BIOS update guide for GIGABYTE / AORUS motherboards via the Q-Flash tool.
 
-### Étapes pour flasher le BIOS (Q-Flash)
-
-1. **Téléchargez le bon fichier BIOS**\
-   → Rendez-vous sur le site [**Gigabyte Support**](https://www.gigabyte.com/fr/Support/Consumer).\
-   → Entrez le **nom exact de votre carte mère** (détecté dans MSINFO32).\
-   → Téléchargez le **dernier BIOS compatible**, ou une version antérieure si nécessaire.
-
-***
-
-2. **Décompressez l’archive ZIP**\
-   → Vous obtiendrez un ou plusieurs fichiers.\
-   → Le fichier BIOS est souvent nommé comme : `B550MDS3H.F14`, `Z790AXX.F7`, etc.
+{% hint style="danger" %}
+#### **Security Guidelines**
+* Never power off or restart your computer during the flash process.
+* Flashing resets BIOS settings: remember to re-enable RAID and re-apply security settings afterwards.
+{% endhint %}
 
 ***
 
-3. **Copiez le fichier BIOS à la racine de la clé USB**\
-   → Utilisez la **même clé USB** que celle utilisée pour l’installation de Windows.\
-   → Il **n’est pas nécessaire de formater** ou de supprimer quoi que ce soit.\
-   → Le fichier BIOS peut coexister avec les autres fichiers comme `autounattend.xml`, le pilote Ethernet, etc.
+### Steps to Flash BIOS (Q-Flash)
+
+1. **Download the Correct BIOS File**\
+   → Visit the official [**GIGABYTE Support**](https://www.gigabyte.com/Support) website.\
+   → Enter your exact motherboard model (and check your motherboard revision number: rev 1.0, 1.1, etc.).\
+   → Download the desired BIOS update archive.
 
 ***
 
-4. **Accédez au BIOS GIGABYTE (EZ Mode)**\
-   Deux méthodes sont possibles :
-
-→ **Méthode recommandée :**\
-Ouvrez un terminal en **administrateur** et tapez la commande :
-
-```
-shutdown /r /fw /t 0
-```
-
-→ Le PC redémarre directement dans le BIOS.
-
-→ **Méthode classique :**\
-Redémarrez manuellement votre PC et appuyez de façon répétée sur **Suppr**.
+2. **Extract the ZIP Archive**\
+   → Extract the archive. Look for the file named after your model with an `.Fxx` extension (e.g. `B550MDS3H.F14`, `Z790AORUS.F7`).
 
 ***
 
-5. **Lancez Q-Flash dans le BIOS**\
-   → Une fois dans le BIOS, appuyez sur **F8** pour lancer **Q-Flash**.\
-   → Sélectionnez **Update BIOS** ou **Q-Flash Update** (le nom varie selon les modèles).
+3. **Copy to USB Flash Drive**\
+   → Place the extracted `.Fxx` file at the root of your USB flash drive alongside Windows setup files.
 
 ***
 
-6. **Sélectionnez le fichier BIOS sur la clé**\
-   → Choisissez le fichier `.Fxx` que vous avez placé à la racine.\
-   → Le processus de flash démarre immédiatement.\
-   → Exemples de fichiers : `Z790AXX.F7`, `B550MDS3H.F14`, etc.
+4. **Access the BIOS**\
+   Restart your PC and repeatedly press **Del** during boot.
 
 ***
 
-7. **Attendez la fin du processus**\
-   → Le PC redémarre automatiquement à la fin.\
-   → **N’éteignez jamais** le PC manuellement pendant le flash.
+5. **Launch Q-Flash**\
+   → Once in BIOS, press **F8** to open **Q-Flash** (or click the Q-Flash tab at the bottom right).\
+   → Select **Update BIOS**.
 
+***
 
-### Vidéo Tutoriel (Flash BIOS)
+6. **Select the BIOS File on Your USB Drive**\
+   → Select your USB drive and click your `.Fxx` BIOS file.\
+   → Confirm to start flashing.
+
+***
+
+7. **Wait for Completion**\
+   → Your system will verify the file, flash the ROM, and reboot automatically.\
+   → Do not interrupt power under any circumstance.
+
+### Video Tutorial (BIOS Flash)
 {% embed url="https://www.youtube.com/watch?v=DIIde3s02kM" %}
