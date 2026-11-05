@@ -1,93 +1,68 @@
-# Sans RAID (installation classique)
+# Without RAID (Standard Installation)
 
-Cette page est destinée aux utilisateurs qui souhaitent réinstaller Windows sans configuration RAID. Elle convient à toutes les machines où le RAID n’est pas activé dans le BIOS.
+This page is intended for users who wish to reinstall Windows without configuring a RAID array. It applies to all systems where RAID mode is not enabled in BIOS.
 
-> Cette méthode est **compatible avec toutes les cartes mères**. Elle ne nécessite pas de pilotes RAID, mais **le fichier `autounattend.xml` est obligatoire** pour automatiser l’installation correctement.
+> This method is **compatible with all motherboards**. It does not require RAID drivers, but **the `autounattend.xml` file is mandatory** to automate installation and prevent tracking.
 
 ***
 
-## Étape 1 – Préparer la clé USB d'installation
+## Step 1 – Prepare Installation USB Flash Drive
 
-1. Branchez votre clé USB contenant :
-   * Windows 10 ou 11 bootable
-   * Le fichier `autounattend.xml`
-   * Le pilote Ethernet
-2. Assurez-vous que le contenu est bien **extrait**, sans aucun fichier `.zip`.
+1. Connect your USB flash drive containing:
+   * Bootable Windows 10 or 11
+   * The `autounattend.xml` file
+   * Network (NIC) drivers
+2. Ensure all contents are **extracted** directly on the drive with no compressed `.zip` archives.
 
 {% hint style="success" %}
-Si vous avez suivi nos étapes précédentes, tout est déjà prêt sur la clé USB.
+If you followed our previous steps, everything is already set up on your USB drive.
 {% endhint %}
 
 ***
 
-## Étape 2 – Démarrer l’installation depuis la clé USB
+## Step 2 – Boot from USB Drive
 
-#### Vous avez deux options :
+#### You have two options:
 
-* **Option 1** : Redémarrez et entrez dans le BIOS (DEL / F2 / F12) pour démarrer sur la clé USB.
-* **Option 2** : Depuis Windows ➜ tapez **UEFI** ➜ cliquez sur **Redémarrage avancé** ➜ choisissez **Utiliser un périphérique** ➜ **Clé USB**.
+* **Option 1**: Restart your PC and press your BIOS boot key (**F11 / F12 / F8 / Esc**) to boot directly from the USB drive.
+* **Option 2**: From Windows ➜ hold **Shift** and click **Restart** ➜ choose **Use a device** ➜ select your **USB drive**.
 
 {% hint style="danger" %}
-N'utilisez **pas d'autres supports** ou d'outils d'installation personnalisés. Utilisez **exclusivement** la clé préparée.
+Do **not** use custom third-party installation tools. Exclusively use the prepared official USB flash drive.
 {% endhint %}
 
 ***
 
-## Étape 3 – Nettoyer les partitions du disque
+## Step 3 – Clean Disk Partitions
 
 {% hint style="danger" %}
-Cette étape est **obligatoire**. Sans nettoyage, le spoof ne fonctionnera pas correctement.
+This partition cleaning step is **mandatory**. Without a completely clean disk, previous identifier traces may persist.
 {% endhint %}
 
-1. Une fois sur l’écran **Où souhaitez-vous installer Windows ?**
-2. Appuyez sur **Shift + F10** pour ouvrir l’invite de commandes.
+1. Once on the **Where do you want to install Windows?** screen:
+2. Press **Shift + F10** to open the Command Prompt terminal.
 
-Exécutez les commandes suivantes :
+Execute the following commands in order:
 
-```
+```cmd
 diskpart
 list disk
-select disk X   ← Remplacez X par le numéro de votre disque
+select disk X
 clean
+convert gpt
+exit
 exit
 ```
+*(Replace `X` with your primary target drive number).*
 
-3. Fermez l’invite de commande et cliquez sur **Actualiser**.
-
-{% hint style="warning" %}
-Si plusieurs disques sont présents, répétez l’opération sur chaque disque sauf sur votre **Clé USB**.
-{% endhint %}
-
-***
-
-## Étape 4 – Finaliser l’installation de Windows
-
-1. Sélectionnez votre disque principal puis cliquez sur **Suivant**.
-2. L’installation démarre automatiquement (grâce au fichier `autounattend.xml`).
-3. Une fois sur le bureau, procédez à l’étape réseau.
-
-{% hint style="success" %}
-Ne touchez à rien : aucune option ne doit être sélectionnée manuellement.
-{% endhint %}
+3. Click **Refresh** in the Windows installation window.
+4. Your drive will now appear as **Drive X Unallocated Space**.
+5. Select the unallocated space and click **Next** to begin installation.
 
 ***
 
-## Étape 5 – Connexion au réseau et pilotes Ethernet
+## Step 4 – Virtual Disk (VHD) Protection (Recommended for Intel Users)
 
-1. Ouvrez votre pilote `Ethernet` depuis la clé USB.
-2. Laissez le programme installer le pilote Ethernet automatiquement.
-3. Une fois connecté à Internet, vous pourrez télécharger vos pilotes restants.
+For Intel CPUs or users who cannot set up a RAID array, setting up a Virtual Hard Disk (**VHD**) hides your physical drive serial numbers from anti-cheat systems.
 
-***
-
-## Étape suivante : Préparation du disque VHD
-
-Une fois Windows installé proprement et que vous êtes bien arrivé sur le Bureau, il est temps de passer à l’étape suivante : la préparation de votre disque virtuel (VHD), indispensable pour la suite du processus.
-
-{% hint style="info" %}
-Cette étape sera expliquée en détail dans la prochaine section du guide.
-{% endhint %}
-
-
-### Vidéo Tutoriel (Reinstall Windows)
-{% embed url="https://youtu.be/P4EYBZB43Ys" %}
+👉 [**Proceed to the Create a VHD Disk Guide**](sans-raid-installation-classique/creer-un-disque-vhd.md)

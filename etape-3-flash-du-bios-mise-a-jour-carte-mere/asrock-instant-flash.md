@@ -1,62 +1,53 @@
 # ASRock (Instant Flash)
 
-Page de mise à jour du BIOS pour les cartes mères ASRock via l’outil Instant Flash.
+BIOS update guide for ASRock motherboards via the Instant Flash tool.
 
-### Étapes pour flasher le BIOS (Instant Flash)
-
-1. **Téléchargez le bon fichier BIOS**\
-   → Rendez-vous sur le site [**ASRock Support**](https://www.asrock.com/support/index.asp).\
-   → Entrez le **nom exact de votre carte mère** (détecté dans MSINFO32).\
-   → Téléchargez le **dernier BIOS compatible**, ou une version antérieure si nécessaire.
-
-***
-
-2. **Décompressez l’archive ZIP**\
-   → Vous obtiendrez un ou plusieurs fichiers.\
-   → Le fichier BIOS porte une extension du type **.ROM** (ex : `B550PG4.ROM`, `Z790STEEL.ROM`, etc.).
+{% hint style="danger" %}
+#### **Security Guidelines**
+* Never disconnect power or force shut down your computer during a BIOS flash.
+* Flashing restores default BIOS values: remember to re-enable RAID mode immediately if applicable.
+{% endhint %}
 
 ***
 
-3. **Copiez le fichier BIOS à la racine de la clé USB**\
-   → Utilisez la **même clé USB** que celle utilisée pour l’installation de Windows.\
-   → Il **n’est pas nécessaire de formater** ou de supprimer quoi que ce soit.\
-   → Le fichier BIOS peut coexister avec les autres fichiers comme `autounattend.xml`, le pilote Ethernet, etc.
+### Steps to Flash BIOS (Instant Flash)
+
+1. **Download the Correct BIOS File**\
+   → Go to the [**ASRock Support**](https://www.asrock.com/support/) page.\
+   → Search for your exact motherboard model.\
+   → Download the latest compatible Instant Flash BIOS archive.
 
 ***
 
-4. **Accédez au BIOS ASRock (EZ Mode)**\
-   Deux méthodes sont possibles :
-
-→ **Méthode recommandée :**\
-Ouvrez un terminal en **administrateur** et tapez la commande :
-
-```
-shutdown /r /fw /t 0
-```
-
-→ Le PC redémarre directement dans le BIOS.
-
-→ **Méthode classique :**\
-Redémarrez manuellement votre PC et appuyez de façon répétée sur **Suppr**.
+2. **Extract the ZIP Archive**\
+   → Extract the archive to find your BIOS ROM file (usually named with the model and extension like `.ROM` or `B550_2.30`).
 
 ***
 
-5. **Lancez Instant Flash dans le BIOS**\
-   → Une fois dans le BIOS, appuyez sur **F6** pour lancer **Instant Flash**.\
-   → L’utilitaire recherche automatiquement les fichiers .ROM présents sur la clé.
+3. **Copy to USB Flash Drive**\
+   → Copy the extracted file to the root directory of your USB drive.
 
 ***
 
-6. **Sélectionnez le fichier BIOS sur la clé**\
-   → Choisissez le fichier **.ROM** que vous avez placé à la racine.\
-   → Lancez la mise à jour. Le processus démarre immédiatement.
+4. **Access the BIOS**\
+   Restart your PC and repeatedly press **Del** or **F2** during boot.
 
 ***
 
-7. **Attendez la fin du processus**\
-   → Le PC redémarrera automatiquement à la fin.\
-   → **N’éteignez jamais** le PC manuellement pendant le flash.
+5. **Launch Instant Flash**\
+   → In the BIOS, go to the **Tool** tab and select **Instant Flash** (or press **F6**).\
+   → The utility automatically scans your USB drive for compatible ROM files.
 
+***
 
-### Vidéo Tutoriel (Flash BIOS)
+6. **Select the BIOS File**\
+   → Click on your BIOS file and confirm the update.
+
+***
+
+7. **Wait for Completion**\
+   → The update will complete and your PC will restart automatically.\
+   → Never turn off the PC manually during the flash.
+
+### Video Tutorial (BIOS Flash)
 {% embed url="https://www.youtube.com/watch?v=dUCWRqOdLUw" %}

@@ -1,27 +1,27 @@
 # Intel (RAID0)
 
-Cette page concerne les utilisateurs Intel souhaitant activer le mode RAID 0 dans le BIOS.
+This page is for Intel processor users interested in configuring RAID 0 mode in the BIOS.
 
-> La procédure RAID Intel varie fortement selon votre carte mère, votre génération de processeur, et la présence ou non du mode **VMD**.
+> The Intel RAID configuration procedure varies significantly depending on your motherboard brand, CPU generation, and whether **Intel VMD (Volume Management Device)** is supported.
 
-Afin d’éviter toute erreur critique, **les manipulations RAID Intel avancées demandent une vérification préalable**.
+To avoid critical system errors, **advanced Intel RAID operations require prior verification**.
 
 {% hint style="warning" %}
-**Support Intel RAID :** Ouvrez un ticket sur notre serveur Discord afin d'obtenir la configuration exacte pour votre carte mère Intel.
+**Intel RAID Support:** Open a ticket on our official Discord server so our staff can evaluate and provide the exact setup steps for your specific Intel motherboard.
 {% endhint %}
 
 ***
 
-### Pourquoi ce ticket est nécessaire ?
+### Why is staff verification required for Intel RAID?
 
-* Les chipsets Intel utilisent différents pilotes RAID (RST, VMD, Optane, etc.).
-* Certains BIOS n’ont pas d’option claire "RAID Mode", mais une section **VMD** qui ne doit **surtout pas** être mal configurée.
-* Le type de disque (NVMe ou SATA) peut aussi modifier la procédure.
+* Intel chipsets utilize several different RAID drivers (RST, VMD, Optane, etc.).
+* Many modern Intel BIOSes do not have a clear "RAID Mode" option, but rather a **VMD** controller section that must be properly configured.
+* Known methods can leak physical drive serial numbers on Intel RAID arrays, making VHD a safer alternative for many users.
 
 ***
 
-### Vous préférez installer sans RAID ?
+### Prefer installing without RAID?
 
-Si vous ne souhaitez pas utiliser le mode RAID0, ou que vous ne savez pas si votre carte mère Intel le permet :
+If you do not want to use RAID0, or if your Intel motherboard does not support it:
 
-👉 [**Accéder au guide Sans RAID (installation classique)**](sans-raid-installation-classique.md)
+👉 [**Proceed to the Without RAID (Standard Installation) Guide**](sans-raid-installation-classique.md)
